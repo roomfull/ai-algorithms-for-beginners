@@ -1,0 +1,63 @@
+{
+  "id": "M02A",
+  "chapter": "M02",
+  "title": "TF-IDF 文本余弦检索",
+  "mode": "float",
+  "requires": [],
+  "cases": [
+    {
+      "name": "余弦方向排序",
+      "input": "3 2 3\n1 0\n0 1\n1 1\n1 0\n",
+      "expected": "0 2 1\n1 0.7071067811865476 0\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "空查询",
+      "input": "2 2 2\n1 0\n0 1\n0 0\n",
+      "expected": "0 1\n0 0\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "空文档与未知词列",
+      "input": "2 2 2\n0 0\n0 0\n0 1\n",
+      "expected": "0 1\n0 0\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "词频倍数平票",
+      "input": "2 1 2\n1\n5\n3\n",
+      "expected": "0 1\n1 1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "训练文档频率不含查询",
+      "input": "2 2 2\n1 1\n1 0\n1 0\n",
+      "expected": "1 0\n1 0.5797386715376657\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "只取一篇",
+      "input": "3 2 1\n1 0\n0 1\n1 1\n0 2\n",
+      "expected": "1\n1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    }
+  ]
+}

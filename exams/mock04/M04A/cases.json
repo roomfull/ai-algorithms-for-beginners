@@ -1,0 +1,64 @@
+{
+  "id": "M04A",
+  "chapter": "M04",
+  "title": "卷积、ReLU 与平均池化特征",
+  "mode": "float",
+  "requires": [],
+  "cases": [
+    {
+      "name": "卷积激活池化",
+      "input": "3 3 2 2\n1 2 3\n4 5 6\n7 8 9\n1 0\n0 -1\n5\n",
+      "expected": "1 1\n1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "ReLU截断",
+      "input": "2 2 1 2\n-1 2\n3 -4\n1\n0\n",
+      "expected": "1 1\n1.25\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "丢弃池化余边",
+      "input": "3 3 1 2\n1 2 100\n3 4 100\n100 100 100\n1\n0\n",
+      "expected": "1 1\n2.5\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "池化尺寸一",
+      "input": "2 2 1 1\n-1 2\n3 4\n2\n-1\n",
+      "expected": "2 2\n0 3\n5 7\n",
+      "line_modes": [
+        "int",
+        "float",
+        "float"
+      ]
+    },
+    {
+      "name": "互相关不翻核",
+      "input": "2 2 2 1\n1 2\n3 4\n1 2\n0 -1\n0\n",
+      "expected": "1 1\n1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "矩形图像",
+      "input": "2 4 1 2\n1 2 3 4\n5 6 7 8\n1\n0\n",
+      "expected": "1 2\n3.5 5.5\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    }
+  ]
+}

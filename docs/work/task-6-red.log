@@ -1,0 +1,211 @@
+test_cosine_scale_invariant (test_mock_algorithms.MockAlgorithms.test_cosine_scale_invariant) ... FAIL
+test_gradient_microbatch_split_invariant (test_mock_algorithms.MockAlgorithms.test_gradient_microbatch_split_invariant) ... FAIL
+test_knn_translation_and_positive_scaling (test_mock_algorithms.MockAlgorithms.test_knn_translation_and_positive_scaling) ... FAIL
+test_m01a_manual (test_mock_algorithms.MockAlgorithms.test_m01a_manual) ... FAIL
+test_m01b_manual (test_mock_algorithms.MockAlgorithms.test_m01b_manual) ... FAIL
+test_m02a_manual (test_mock_algorithms.MockAlgorithms.test_m02a_manual) ... FAIL
+test_m02b_manual (test_mock_algorithms.MockAlgorithms.test_m02b_manual) ... FAIL
+test_m03a_manual (test_mock_algorithms.MockAlgorithms.test_m03a_manual) ... FAIL
+test_m03b_manual (test_mock_algorithms.MockAlgorithms.test_m03b_manual) ... FAIL
+test_m04a_manual (test_mock_algorithms.MockAlgorithms.test_m04a_manual) ... FAIL
+test_m04b_manual (test_mock_algorithms.MockAlgorithms.test_m04b_manual) ... FAIL
+test_mst_matches_tree_enumeration (test_mock_algorithms.MockAlgorithms.test_mst_matches_tree_enumeration) ... FAIL
+test_pagerank_probability_and_symmetry (test_mock_algorithms.MockAlgorithms.test_pagerank_probability_and_symmetry) ... FAIL
+test_quantization_error_bound (test_mock_algorithms.MockAlgorithms.test_quantization_error_bound) ... FAIL
+
+======================================================================
+FAIL: test_cosine_scale_invariant (test_mock_algorithms.MockAlgorithms.test_cosine_scale_invariant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 145, in test_cosine_scale_invariant
+    solve = load_solution('M02A')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M02A
+
+======================================================================
+FAIL: test_gradient_microbatch_split_invariant (test_mock_algorithms.MockAlgorithms.test_gradient_microbatch_split_invariant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 135, in test_gradient_microbatch_split_invariant
+    solve = load_solution('M04B')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M04B
+
+======================================================================
+FAIL: test_knn_translation_and_positive_scaling (test_mock_algorithms.MockAlgorithms.test_knn_translation_and_positive_scaling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 129, in test_knn_translation_and_positive_scaling
+    solve = load_solution('M01A')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M01A
+
+======================================================================
+FAIL: test_m01a_manual (test_mock_algorithms.MockAlgorithms.test_m01a_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 100, in test_m01a_manual
+    def test_m01a_manual(self): self.check_cases('M01A')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M01A
+
+======================================================================
+FAIL: test_m01b_manual (test_mock_algorithms.MockAlgorithms.test_m01b_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 101, in test_m01b_manual
+    def test_m01b_manual(self): self.check_cases('M01B')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M01B
+
+======================================================================
+FAIL: test_m02a_manual (test_mock_algorithms.MockAlgorithms.test_m02a_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 102, in test_m02a_manual
+    def test_m02a_manual(self): self.check_cases('M02A')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M02A
+
+======================================================================
+FAIL: test_m02b_manual (test_mock_algorithms.MockAlgorithms.test_m02b_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 103, in test_m02b_manual
+    def test_m02b_manual(self): self.check_cases('M02B')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M02B
+
+======================================================================
+FAIL: test_m03a_manual (test_mock_algorithms.MockAlgorithms.test_m03a_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 104, in test_m03a_manual
+    def test_m03a_manual(self): self.check_cases('M03A')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M03A
+
+======================================================================
+FAIL: test_m03b_manual (test_mock_algorithms.MockAlgorithms.test_m03b_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 105, in test_m03b_manual
+    def test_m03b_manual(self): self.check_cases('M03B')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M03B
+
+======================================================================
+FAIL: test_m04a_manual (test_mock_algorithms.MockAlgorithms.test_m04a_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 106, in test_m04a_manual
+    def test_m04a_manual(self): self.check_cases('M04A')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M04A
+
+======================================================================
+FAIL: test_m04b_manual (test_mock_algorithms.MockAlgorithms.test_m04b_manual)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 107, in test_m04b_manual
+    def test_m04b_manual(self): self.check_cases('M04B')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 94, in check_cases
+    solve = load_solution(pid)
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M04B
+
+======================================================================
+FAIL: test_mst_matches_tree_enumeration (test_mock_algorithms.MockAlgorithms.test_mst_matches_tree_enumeration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 110, in test_mst_matches_tree_enumeration
+    solve = load_solution('M01B')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M01B
+
+======================================================================
+FAIL: test_pagerank_probability_and_symmetry (test_mock_algorithms.MockAlgorithms.test_pagerank_probability_and_symmetry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 123, in test_pagerank_probability_and_symmetry
+    solve = load_solution('M02B')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M02B
+
+======================================================================
+FAIL: test_quantization_error_bound (test_mock_algorithms.MockAlgorithms.test_quantization_error_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 139, in test_quantization_error_bound
+    rows = load_solution('M03B')('1 5 3\n-2.5 -1.1 0 0.7 3\n').splitlines()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_mock_algorithms.py", line 85, in load_solution
+    assert path.exists(), f'ȱ��ģ����ο��� {pid}'
+           ^^^^^^^^^^^^^
+AssertionError: ȱ��ģ����ο��� M03B
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.006s
+
+FAILED (failures=14)

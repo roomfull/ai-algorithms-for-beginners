@@ -1,0 +1,253 @@
+test_all_required_materials_and_independent_code (test_course_integrity.CourseIntegrity.test_all_required_materials_and_independent_code) ... ok
+test_cases_unique_complete_and_shape_valid (test_course_integrity.CourseIntegrity.test_cases_unique_complete_and_shape_valid) ... ok
+test_chapter_tutorials_and_exam_navigation (test_course_integrity.CourseIntegrity.test_chapter_tutorials_and_exam_navigation) ... ok
+test_course_local_markdown_links_resolve (test_course_integrity.CourseIntegrity.test_course_local_markdown_links_resolve) ... ERROR
+test_exact_ids_and_chapter_counts (test_course_integrity.CourseIntegrity.test_exact_ids_and_chapter_counts) ... FAIL
+test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) ... 
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P039') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P040') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P041') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P042') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P043') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P044') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P045') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P046') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P047') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P048') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P049') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P050') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P051') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P052') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P053') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P054') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P055') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P056') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P057') ... FAIL
+  test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P058') ... FAIL
+test_first_sample_matches_real_case (test_course_integrity.CourseIntegrity.test_first_sample_matches_real_case) ... 
+  test_first_sample_matches_real_case (test_course_integrity.CourseIntegrity.test_first_sample_matches_real_case) (pid='P001') ... FAIL
+test_navigation_has_no_stage_placeholder (test_course_integrity.CourseIntegrity.test_navigation_has_no_stage_placeholder) ... FAIL
+test_problem_teaching_sections_and_solution_sections (test_course_integrity.CourseIntegrity.test_problem_teaching_sections_and_solution_sections) ... ok
+test_progress_has_exactly_88_rows (test_course_integrity.CourseIntegrity.test_progress_has_exactly_88_rows) ... ERROR
+
+======================================================================
+ERROR: test_course_local_markdown_links_resolve (test_course_integrity.CourseIntegrity.test_course_local_markdown_links_resolve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 128, in test_course_local_markdown_links_resolve
+    text=path.read_text(encoding='utf-8')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\98356\\Documents\\ChatGPT\\AI科目1\\PROGRESS.md'
+
+======================================================================
+ERROR: test_progress_has_exactly_88_rows (test_course_integrity.CourseIntegrity.test_progress_has_exactly_88_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 107, in test_progress_has_exactly_88_rows
+    text=(ROOT/'PROGRESS.md').read_text(encoding='utf-8')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\98356\\Documents\\ChatGPT\\AI科目1\\PROGRESS.md'
+
+======================================================================
+FAIL: test_exact_ids_and_chapter_counts (test_course_integrity.CourseIntegrity.test_exact_ids_and_chapter_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 27, in test_exact_ids_and_chapter_counts
+    self.assertEqual(Counter(d['chapter'] for p,d in data),EXPECTED_COUNTS)
+AssertionError: Counter({'01': 14, '05': 12, '07': 12, '0[87 chars]: 2}) != {'01': 14, '02': 8, '03': 8, '04': 8, '05[78 chars]': 2}
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P039')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P039：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, k = map(int, lines[0].split())\n    points = [list(map(int, line.split())) for line in lines[1:1+n]]\n    query = list(map(int, lines[1+n].split()))\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P040')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P040：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, k = map(int, lines[0].split())\n    samples = [list(map(int, line.split())) for line in lines[1:n+1]]\n    query = list(map(int, lines[n+1].split()))\n    # samples[i][0]是标签，samples[i][1:]是特征。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P041')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P041：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, k, q = map(int, lines[0].split())\n    samples = [list(map(int, line.split())) for line in lines[1:n+1]]\n    queries = [list(map(int, line.split())) for line in lines[n+1:n+1+q]]\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P042')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P042：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, c = map(int, lines[0].split())\n    points = [list(map(float, line.split())) for line in lines[1:n+1]]\n    centers = [list(map(float, line.split())) for line in lines[n+1:n+1+c]]\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P043')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P043：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, c = map(int, lines[0].split())\n    points = [list(map(float, line.split())) for line in lines[1:n+1]]\n    old_centers = [list(map(float, line.split())) for line in lines[n+1:n+1+c]]\n    labels = list(map(int, lines[n+1+c].split()))\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P044')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P044：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    head = lines[0].split()\n    n, d, c, max_iter = map(int, head[:4])\n    tol = float(head[4])\n    points = [list(map(float, line.split())) for line in lines[1:n+1]]\n    centers = [list(map(float, line.split())) for line in lines[n+1:n+1+c]]\n    # 建议写assign函数，循环后也调用它。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P045')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P045：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\nfrom fractions import Fraction\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d = map(int, lines[0].split())\n    points = [list(map(Fraction, line.split())) for line in lines[1:n+1]]\n    weights = list(map(Fraction, lines[n+1].split()))\n    bias = Fraction(lines[n+2])\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P046')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P046：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d = map(int, lines[0].split())\n    samples = [list(map(float, line.split())) for line in lines[1:n+1]]\n    weights = list(map(float, lines[n+1].split()))\n    bias = float(lines[n+2])\n    # sample[0]是0/1标签，sample[1:]是特征。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P047')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P047：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    head = lines[0].split()\n    n, d, steps = map(int, head[:3])\n    lr = float(head[3])\n    samples = [list(map(float, line.split())) for line in lines[1:n+1]]\n    weights = list(map(float, lines[n+1].split()))\n    bias = float(lines[n+2])\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P048')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P048：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    labels = list(map(int, raw.split()))\n    # 可以先用字典统计每类出现的次数。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P049')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P049：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\nfrom fractions import Fraction\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d = map(int, lines[0].split())\n    rows = []\n    for line in lines[1:n+1]:\n        tokens = line.split()\n        rows.append((int(tokens[0]), list(map(Fraction, tokens[1:]))))\n    # rows中的元素是(label, features)。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P050')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P050：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\nfrom fractions import Fraction\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, q, max_depth = map(int, lines[0].split())\n    rows = []\n    for line in lines[1:n+1]:\n        tokens = line.split()\n        rows.append((int(tokens[0]), list(map(Fraction, tokens[1:]))))\n    queries = [list(map(Fraction, line.split())) for line in lines[n+1:n+1+q]]\n    # 建议分别写gini、train、predict函数；根节点深度为0。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P051')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P051：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, d, o = map(int, lines[0].split())\n    x = [list(map(float, line.split())) for line in lines[1:n+1]]\n    w = [list(map(float, line.split())) for line in lines[n+1:n+1+d]]\n    b = list(map(float, lines[n+1+d].split()))\n    # 输出的行数是n，列数是o。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P052')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P052：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    n, c = map(int, lines[0].split())\n    logits = [list(map(float, line.split())) for line in lines[1:n+1]]\n    # 每行独立求概率，先减本行最大值。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P053')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P053：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    head = lines[0].split()\n    n, c = map(int, head[:2])\n    eps = float(head[2])\n    binary_rows = [line.split() for line in lines[1:n+1]]\n    multiclass_rows = [line.split() for line in lines[n+1:2*n+1]]\n    # 两种行格式不同，标签用int，概率用float。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P054')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P054：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    head = lines[0].split()\n    n, d = map(int, head[:2])\n    lr = float(head[2])\n    samples = [list(map(float, line.split())) for line in lines[1:n+1]]\n    weights = list(map(float, lines[n+1].split()))\n    bias = float(lines[n+2])\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P055')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P055：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    h, w, kh, kw, stride, pad = map(int, lines[0].split())\n    x = [list(map(float, line.split())) for line in lines[1:h+1]]\n    kernel = [list(map(float, line.split())) for line in lines[h+1:h+1+kh]]\n    # 输出高度/宽度由README公式计算。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P056')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P056：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    h, w, kh, kw, stride, pad, ph, pw, ps = map(int, lines[0].split())\n    x = [list(map(float, line.split())) for line in lines[1:h+1]]\n    kernel = [list(map(float, line.split())) for line in lines[h+1:h+1+kh]]\n    bias = float(lines[h+1+kh])\n    # 先构造卷积-ReLU矩阵，再单独遍历池化窗口。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P057')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P057：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    h, w, kh, kw, stride, pad = map(int, lines[0].split())\n    x = [list(map(float, line.split())) for line in lines[1:h+1]]\n    kernel = [list(map(float, line.split())) for line in lines[h+1:h+1+kh]]\n    # 初始化输出为全0，散射累加，不能覆盖。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) (pid='P058')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 92, in test_exercises_still_unfinished_and_do_not_import_answers
+    self.assertNotIn('solutions',(p.parent/'exercise.py').read_text(encoding='utf-8'))
+AssertionError: 'solutions' unexpectedly found in '"""P058：练习脚手架，保持独立；不要导入solutions。"""\nimport sys\nimport math\n\n\n\ndef solve(raw):\n    lines = raw.strip().splitlines()\n    real, z, a, g, w, b, lr_d, lr_g = map(float, raw.split())\n    # 先保存fake，再计算D梯度和新w,b，最后计算G梯度。\n    # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。\n    raise NotImplementedError("请按题目提示完成这里")\n\n\nif __name__ == \'__main__\':\n    print(solve(sys.stdin.read()))\n'
+
+======================================================================
+FAIL: test_first_sample_matches_real_case (test_course_integrity.CourseIntegrity.test_first_sample_matches_real_case) (pid='P001')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 66, in test_first_sample_matches_real_case
+    self.assertEqual(blocks[0].strip(),d['cases'][0]['input'].strip())
+AssertionError: '（空输入；不要输入这一行说明）' != ''
+- （空输入；不要输入这一行说明）
++ 
+
+
+======================================================================
+FAIL: test_navigation_has_no_stage_placeholder (test_course_integrity.CourseIntegrity.test_navigation_has_no_stage_placeholder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_course_integrity.py", line 116, in test_navigation_has_no_stage_placeholder
+    self.assertNotRegex(text,r'后续.*(?:生成|参考解)|尚未提供正式题目|基础工具阶段')
+AssertionError: Regex matched: '后续课程工作包生成' matches '后续.*(?:生成|参考解)|尚未提供正式题目|基础工具阶段' in '# Python 零基础到 AI 科目一练习\n\n从普通 Python 开始，再学 NumPy、公共 AI 基础和 AI 系统优化算法。练习为原创训练材料；正式考试的版本、环境和规则请以你的考试说明为准。\n\n**第一次学习请先读 [零基础起步](docs/START_HERE.md)。** 它从打开终端、运行第一段代码讲起。\n\n在项目根目录的 PowerShell 中执行：\n\n```powershell\n.\\setup.ps1\n.\\.venv\\Scripts\\python.exe --version\n.\\.venv\\Scripts\\python.exe -c "import numpy; print(numpy.__version__)"\n```\n\n项目使用 Python 3.11、NumPy 2.2.6。`.venv` 是独立环境；无需激活即可运行，也不需要全局 pip。首次安装依赖需要网络，安装完成后课程运行与判题无需网络。\n\n题目入口将在后续课程工作包生成：`chapters/01_python/problems/P001/README.md`。本基础工具阶段尚未提供正式题目。题目加入后，在根目录运行：\n\n```powershell\n.\\.venv\\Scripts\\python.exe check.py --list\n.\\.venv\\Scripts\\python.exe check.py P001\n.\\.venv\\Scripts\\python.exe check.py --chapter 01\n```\n\n学习顺序是读题、手算、编辑题目目录下的 `exercise.py`、保存、检查、根据失败案例修改。`未完成` 提示表示脚手架中的 `NotImplementedError` 还没有替换。\n\n检查器维护测试可直接执行：\n\n```powershell\n.\\.venv\\Scripts\\python.exe -m unittest discover -s tests -p test_checker.py -v\n```\n\n检查器运行真实子进程，判定通过、答案错误、未完成、语法错误、运行错误、缺少模块和超时。退出码 `0` 表示全通过，`1` 表示学习代码未通过，`2` 表示参数、题目元数据或环境存在问题。当前目录没有题目时，`--list` 和 `--all` 返回 `2`，避免把空检查误报为成功。\n\n<details>\n<summary>维护与对照用参考答案入口</summary>\n\n后续独立参考解位于 `solutions/<题号>.py`，讲解位于 `solutions/<题号>.md`。使用 `--solution` 才会检查答案，普通检查默认运行练习。\n\n```powershell\n.\\.venv\\Scripts\\python.exe check.py --all --solution\n```\n\n</details>\n'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.220s
+
+FAILED (failures=23, errors=2)

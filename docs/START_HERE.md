@@ -83,7 +83,7 @@ print("Hello, Python!")
 
 ## 5. 开始第一题
 
-课程题目由后续工作包生成；基础工具阶段计划入口是 `chapters/01_python/problems/P001/README.md`，此阶段不宣称该题已存在或已经验收。内容完成后，先读第 01 章教程与 P001 题面，再编辑相邻的 `exercise.py`。
+先读 [第01章教程](../chapters/01_python/README.md) 和 [P001第一行固定输出](../chapters/01_python/problems/P001/README.md)，再打开相邻的 [exercise.py](../chapters/01_python/problems/P001/exercise.py)。题目已经完整提供；练习仍保留未完成标记，等待你填写。P001不需要输入，先按题面写输出，保存后检查。
 
 在根目录运行以下命令即可列题与检查：
 
@@ -93,7 +93,7 @@ print("Hello, Python!")
 .\.venv\Scripts\python.exe check.py --chapter 01
 ```
 
-`--list` 列出题号、章节和标题。`P001` 只检查这题；`--chapter 01` 检查这一章。模拟卷内容完成后使用 `--chapter M01`。未发现题目、未知题号、空章节都会清楚报错。
+`--list` 列出88个题号、章节和标题。`P001` 只检查这题；`--chapter 01` 检查这一章。[模拟卷M01](../exams/mock01/README.md) 使用 `--chapter M01`。未知题号、空章节都会清楚报错。
 
 要单独运行题目，可在根目录使用 `.\.venv\Scripts\python.exe chapters\01_python\problems\P001\exercise.py`。如果程序需要输入，按题面逐行输入并回车；程序等待输入时没有新提示不等于卡住。检查器会自动把案例输入送给程序。
 

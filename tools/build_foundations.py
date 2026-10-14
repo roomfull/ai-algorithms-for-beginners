@@ -1014,7 +1014,8 @@ def build_content():
         pid = f"P{number:03}"
         directory = f"chapters/{chapter}/problems/{pid}"
         first_input, first_output = pairs[0]
-        sample_input = first_input if first_input else "（空输入；不要输入这一行说明）\n"
+        sample_input = first_input if first_input else "\n"
+        sample_note = "空输入，不要输入任何字符。下面代码块为空。" if not first_input else ""
         hints = "\n\n".join(
             f"<details><summary>提示{i}</summary>\n\n{text}\n\n</details>"
             for i, text in enumerate(lesson["hints"], 1))
@@ -1047,7 +1048,7 @@ def build_content():
 
 ## 完整样例
 
-输入（与 cases.json 第一个案例一致）：
+输入（与 cases.json 第一个案例一致）：{sample_note}
 
 ```text
 {sample_input}```
