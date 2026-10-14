@@ -1,0 +1,56 @@
+test_m01a_constant_fixture_within_bounds (test_mock_algorithms.MockAlgorithms.test_m01a_constant_fixture_within_bounds) ... FAIL
+
+======================================================================
+FAIL: test_m01a_constant_fixture_within_bounds (test_mock_algorithms.MockAlgorithms.test_m01a_constant_fixture_within_bounds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_mock_algorithms.py", line 109, in test_m01a_constant_fixture_within_bounds
+    self.assertTrue(all(abs(value) <= 100 for value in query), query)
+AssertionError: False is not true : [2.0, 999.0]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+RED fixture_exit_code=1
+COMMAND: .\.venv\Scripts\python.exe -m unittest discover -s tests -p test_mock_algorithms.py -k m01a -k knn -v
+test_knn_translation_and_positive_scaling (test_mock_algorithms.MockAlgorithms.test_knn_translation_and_positive_scaling) ... ok
+test_m01a_constant_fixture_within_bounds (test_mock_algorithms.MockAlgorithms.test_m01a_constant_fixture_within_bounds) ... ok
+test_m01a_manual (test_mock_algorithms.MockAlgorithms.test_m01a_manual) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+OK
+GREEN mock_exit_code=0
+COMMAND: .\.venv\Scripts\python.exe check.py M01A --solution
+
+M01A 训练集标准化后的 KNN 分类
+  [通过] 两维缩放改变近邻：输出符合要求
+  [通过] 常量列忽略：输出符合要求
+  [通过] 距离及投票平票：输出符合要求
+  [通过] 单样本全常量：输出符合要求
+  [通过] 多数票：输出符合要求
+  [通过] 十进制对称边界：输出符合要求
+
+通过 6/6 个案例，共 1 题
+M01A_checker_exit_code=0
+COMMAND: .\.venv\Scripts\python.exe -m unittest discover -s tests -p test_course_integrity.py -v
+test_all_required_materials_and_independent_code (test_course_integrity.CourseIntegrity.test_all_required_materials_and_independent_code) ... ok
+test_cases_unique_complete_and_shape_valid (test_course_integrity.CourseIntegrity.test_cases_unique_complete_and_shape_valid) ... ok
+test_chapter_tutorials_and_exam_navigation (test_course_integrity.CourseIntegrity.test_chapter_tutorials_and_exam_navigation) ... ok
+test_course_local_markdown_links_resolve (test_course_integrity.CourseIntegrity.test_course_local_markdown_links_resolve) ... ok
+test_exact_ids_and_chapter_counts (test_course_integrity.CourseIntegrity.test_exact_ids_and_chapter_counts) ... ok
+test_exercises_still_unfinished_and_do_not_import_answers (test_course_integrity.CourseIntegrity.test_exercises_still_unfinished_and_do_not_import_answers) ... ok
+test_first_sample_matches_real_case (test_course_integrity.CourseIntegrity.test_first_sample_matches_real_case) ... ok
+test_navigation_has_no_stage_placeholder (test_course_integrity.CourseIntegrity.test_navigation_has_no_stage_placeholder) ... ok
+test_problem_teaching_sections_and_solution_sections (test_course_integrity.CourseIntegrity.test_problem_teaching_sections_and_solution_sections) ... ok
+test_progress_has_exactly_88_rows (test_course_integrity.CourseIntegrity.test_progress_has_exactly_88_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.325s
+
+OK
+integrity_exit_code=0
+COMMAND (只统计，不执行): .\.venv\Scripts\python.exe -c "import unittest; print(unittest.defaultTestLoader.discover('tests').countTestCases())"
+105

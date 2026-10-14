@@ -1,6 +1,7 @@
 """模拟卷独立手算案例；不运行参考答案生成期望。"""
 import importlib.util
 import itertools
+import json
 import math
 from pathlib import Path
 import unittest
@@ -23,7 +24,7 @@ unequal = 1 / math.sqrt(1 + a*a)
 CASES = {
  'M01A': [
   case('两维缩放改变近邻', '3 2 1\n0 0 9\n2 100 3\n4 0 7\n2 0\n', '0\n9\n', ['int','int']),
-  case('常量列忽略', '2 2 1\n0 5 4\n2 5 8\n2 999\n', '1\n8\n', ['int','int']),
+  case('常量列忽略', '2 2 1\n0 5 4\n2 5 8\n2 100\n', '1\n8\n', ['int','int']),
   case('距离及投票平票', '4 1 4\n-3 8\n-1 5\n1 8\n3 5\n0\n', '1 2 0 3\n5\n', ['int','int']),
   case('单样本全常量', '1 2 1\n4 6 -2\n100 -100\n', '0\n-2\n', ['int','int']),
   case('多数票', '3 1 3\n0 9\n1 9\n2 2\n2\n', '2 1 0\n9\n', ['int','int']),
@@ -98,6 +99,16 @@ class MockAlgorithms(unittest.TestCase):
                 self.assertTrue(ok, reason)
 
     def test_m01a_manual(self): self.check_cases('M01A')
+    def test_m01a_constant_fixture_within_bounds(self):
+        # 常量列查询可以不同于训练值，但仍须满足题面绝对值≤100。
+        source = next(c for c in CASES['M01A'] if c['name'] == '常量列忽略')
+        data = json.loads((ROOT/'exams/mock01/M01A/cases.json').read_text(encoding='utf-8'))
+        stored = next(c for c in data['cases'] if c['name'] == source['name'])
+        self.assertEqual(stored, source)
+        query = list(map(float, source['input'].splitlines()[-1].split()))
+        self.assertTrue(all(abs(value) <= 100 for value in query), query)
+        self.assertNotEqual(query[1], 5, '保留查询常量列偏离训练值的覆盖')
+
     def test_m01b_manual(self): self.check_cases('M01B')
     def test_m02a_manual(self): self.check_cases('M02A')
     def test_m02b_manual(self): self.check_cases('M02B')

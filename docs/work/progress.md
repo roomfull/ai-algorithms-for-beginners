@@ -10,7 +10,7 @@
 - Task 3: complete (8a73936..415cd0a..aa3a274). 16 problems, 82/82 cases, 9 independent/regression tests. Round1 addressed all 3 P2; reviewer passed focused re-review and source consistency.
 - Task 4: complete (fa791e9..cf1fa3b). 20 problems,108/108 cases,14 independent/regression tests; review_ml fix round1 passed (3 P2 +1 P3 closed). Mixed output checker integrated and reviewed.
 - Task 5: complete (9ec25a2..0b92e40). 22 problems,112 cases,15 independent tests; review_systems scoped re-review Spec PASS, Quality Approved. P069 exact decimal equality and P060 storage complexity addressed, no open issues.
-- Task 6: in_progress
+- Task 6: fix_round_1_in_progress (41d5dc6). Full course88/461, unittest104 OK; reviewer found M01A out-of-range fixture999 vs max100 (P2) and neural references ranges (P3). Original implementer assigned scoped corrections.
 
 ## 崩溃恢复记录
 

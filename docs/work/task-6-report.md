@@ -10,7 +10,7 @@
 - PROGRESS.md：按章/卷分组的88个标准Markdown `- [ ]` 手动勾选条目，各含状态、理解、复习与备注；docs/MISTAKES.md：真实第一题试错例子与可复制模板。
 - docs/REFERENCES.md和MAINTAINING.md：分专题一手官方/GitHub资料、教学约定与库默认行为区别、维护格式、真实验收数字及生成器覆盖练习警示。
 - tools/build_mock_exams.py：维护生成器按卷执行，固定预期来自tests/test_mock_algorithms.py中的独立手算数据；不运行参考答案生成预期。
-- tests/test_mock_algorithms.py与test_course_integrity.py：14个模拟算法方法（8题手算+6性质/枚举）、10个完整性方法。
+- tests/test_mock_algorithms.py与test_course_integrity.py：初版14个模拟算法方法（8题手算+6性质/枚举），修复轮1新增1个输入范围/固定数据同步回归，当前15个模拟测试方法；另有10个完整性方法。
 
 ## 实际验证
 
@@ -38,3 +38,22 @@ TDD证据：[task-6-red.log](task-6-red.log)记录14项模拟算法方法因缺�
 生成器是维护工具，会覆盖练习脚手架，普通学习无需运行。Fraction小规模精确边界、排名键舍入和各算法规则均在题面明示；课程是原创教学及单机数值模拟，不声称正式真题、考试评分或实际系统加速。
 
 未解决问题：无。没有Git提交；等待主代理对最终差异作独立审查。
+
+## 独立审查修复轮1（基线41d5dc6）
+
+根据[task-6-review.md](task-6-review.md)修复两项材料问题，参考算法不变：
+
+- M01A“常量列忽略”案例的查询`2 999`超出特征绝对值≤100约束。独立固定数据源与exams/mock01/M01A/cases.json同步改为`2 100`，期望仍是近邻1、标签8。生成器直接读取该固定数据源，因此无需重生成或覆盖练习。训练第二列恒为5而查询为100，继续覆盖忽略训练常量列的目的。
+- REFERENCES神经网络来源题号更正为P051–P054全连接/ReLU、稳定softmax、交叉熵与梯度；P055–P057卷积、最大池化与转置卷积；GAN仅P058。平均池化仍对应M04A，额外注明P056最大池化的一手来源。
+
+新增`test_m01a_constant_fixture_within_bounds`：核对磁盘案例与独立源相同、查询绝对值≤100、查询常量列仍不同于训练值。先观察RED（[2.0,999.0]失败、退出码1），再修数据观察GREEN。
+
+实际相关验证命令与输出：
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_mock_algorithms.py -k m01a -k knn -v
+.\.venv\Scripts\python.exe check.py M01A --solution
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_course_integrity.py -v
+```
+
+依次通过3个测试方法、6/6题目案例、10个完整性方法，退出码均0；RED和修后原始精简输出保存于[task-6-repair-1.log](task-6-repair-1.log)。额外只加载并统计unittest套件（未执行），当前定义105个方法。原始全库日志仍为修复前461/461、104方法OK并原样保留；此轮未重跑全套，以相关测试验证修改范围。题目和案例总数保持88题461case。
