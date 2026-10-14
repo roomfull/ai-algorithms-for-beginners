@@ -1,0 +1,8 @@
+test_sigmoid_classification_uses_exact_decimal_score_sign (tests.test_ml_neural.MLNeuralTests.test_sigmoid_classification_uses_exact_decimal_score_sign) ... ok
+test_cart_decimal_midpoint_goes_left_without_boundary_epsilon (tests.test_ml_neural.MLNeuralTests.test_cart_decimal_midpoint_goes_left_without_boundary_epsilon) ... ok
+test_bce_tiny_epsilon_against_independent_decimal_oracle (tests.test_ml_neural.MLNeuralTests.test_bce_tiny_epsilon_against_independent_decimal_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.512s
+
+OK

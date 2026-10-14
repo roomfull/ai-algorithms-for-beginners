@@ -1,6 +1,6 @@
 # P053 BCE 与多分类交叉熵
 
-输入的是概率。二分类先p←min(1-eps,max(eps,p))，算平均[-y ln p-(1-y)ln(1-p)]。多分类每行真实类别为t，只取它的概率p_t做同样clip，算平均[-ln p_t]；不重新归一化clip后的概率。本题clip上界也用于多分类，真实类概率1会产生很小正损失。
+输入的是概率。二分类先p←min(1-eps,max(eps,p))，算平均[-y ln p-(1-y)ln(1-p)]。多分类每行真实类别为t，只取它的概率p_t做同样clip，算平均[-ln p_t]；不重新归一化clip后的概率。本题clip上界也用于多分类，真实类概率1会产生很小正损失。 实现时可等价地先取真实类概率q（y=1取p，y=0取1-p），直接对q裁剪并求-ln(q)。q≤eps时直接用-log(eps)，q≥1-eps时用-log1p(-eps)，避免先构造1-eps再相减恢复eps或损失微小正确类损失精度。
 
 ## 输入与约束
 
@@ -43,7 +43,7 @@
 
 <details><summary>提示 3</summary>
 
-对n行二分类分别求-y*log(p)-(1-y)*log1p(-p)，平均；多分类累加-log(clip(probs[target]))后除n。
+二分类先取q=p if y==1 else 1-p；多分类取q=probs[target]。q≤eps返回-log(eps)，q≥1-eps返回-log1p(-eps)，其余返回-log(q)，最后按n平均。
 
 </details>
 

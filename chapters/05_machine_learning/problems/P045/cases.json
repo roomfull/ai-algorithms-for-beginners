@@ -55,6 +55,24 @@
         "float",
         "int"
       ]
+    },
+    {
+      "name": "精确十进制零分数",
+      "input": "1 3\n1 1 1\n9.1 0.2 -9.3\n0\n",
+      "expected": "0.5\n1\n",
+      "line_modes": [
+        "float",
+        "int"
+      ]
+    },
+    {
+      "name": "近零负分数按符号分类",
+      "input": "1 1\n-0.000001\n0.000001\n0\n",
+      "expected": "0.5\n0\n",
+      "line_modes": [
+        "float",
+        "int"
+      ]
     }
   ]
 }

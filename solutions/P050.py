@@ -1,5 +1,6 @@
 """P050：多层递归CART分类树。"""
 import sys
+from fractions import Fraction
 
 
 def counts_of(rows):
@@ -23,7 +24,7 @@ def train(rows, d, max_depth, depth=0):
     for j in range(d):
         values = sorted(set(x[j] for y, x in rows))
         for a, b in zip(values, values[1:]):
-            threshold = (a+b)/2
+            threshold = (a+b)/2  # Fraction中点与查询严格比较，不为边界加epsilon。
             left = [(y, x) for y, x in rows if x[j] <= threshold]
             right = [(y, x) for y, x in rows if x[j] > threshold]
             score = (len(left)*gini(left)+len(right)*gini(right))/len(rows)
@@ -53,8 +54,8 @@ def solve(raw):
     rows = []
     for line in lines[1:n+1]:
         tokens = line.split()
-        rows.append((int(tokens[0]), list(map(float, tokens[1:]))))
-    queries = [list(map(float, line.split())) for line in lines[n+1:n+1+q]]
+        rows.append((int(tokens[0]), list(map(Fraction, tokens[1:]))))
+    queries = [list(map(Fraction, line.split())) for line in lines[n+1:n+1+q]]
     tree = train(rows, d, max_depth)
     return '\n'.join(str(predict(tree, x)) for x in queries)
 

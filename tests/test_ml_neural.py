@@ -6,6 +6,7 @@ import math
 import sys
 import re
 from fractions import Fraction
+from decimal import Decimal, localcontext
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +48,33 @@ class MLNeuralTests(unittest.TestCase):
     def test_knn_distance_and_vote_ties_are_distinct(self):
         self.assertEqual(self.run_solution(40,'2 1 1\n8 1\n2 -1\n0\n'),[[8]])
         self.assertEqual(self.run_solution(40,'2 1 2\n8 1\n2 -1\n0\n'),[[2]])
+
+    def test_sigmoid_classification_uses_exact_decimal_score_sign(self):
+        # Fraction从原字符串构造，独立核对9.1+0.2-9.3精确为0。
+        exact=sum(Fraction(t) for t in ('9.1','0.2','-9.3'))
+        self.assertEqual(exact,0)
+        self.assertEqual(self.run_solution(45,'1 3\n1 1 1\n9.1 0.2 -9.3\n0\n', ['float','int']),[[0.5],[1]])
+        # 输出概率会显示0.5，但精确负分数的标签仍必须为0。
+        self.assertEqual(self.run_solution(45,'1 1\n-0.000001\n0.000001\n0\n', ['float','int']),[[0.5],[0]])
+
+    def test_cart_decimal_midpoint_goes_left_without_boundary_epsilon(self):
+        midpoint=(Fraction('-0.4')+Fraction('-0.2'))/2
+        self.assertEqual(midpoint,Fraction('-0.3'))
+        raw='2 1 4 1\n0 -0.4\n1 -0.2\n-0.300001\n-0.3\n-0.299999\n-0.2\n'
+        self.assertEqual(self.run_solution(50,raw,['int']*4),[[0],[0],[1],[1]])
+        self.assertEqual(self.run_solution(49,'2 1\n0 -0.4\n1 -0.2\n',['int','float']),[[0],[-0.3,0]])
+
+    def test_bce_tiny_epsilon_against_independent_decimal_oracle(self):
+        with localcontext() as ctx:
+            ctx.prec=70
+            eps=Decimal('1.000033e-12')
+            wrong_loss=float(-eps.ln())
+            correct_loss=float(-(Decimal(1)-eps).ln())
+        for y,p in ((0,1),(1,0)):
+            with self.subTest(y=y):
+                output=self.run_solution(53,f'1 1 1.000033e-12\n{y} {p}\n0 1\n')[0]
+                self.assertTrue(math.isclose(output[0],wrong_loss,abs_tol=1e-9,rel_tol=1e-11),(output[0],wrong_loss))
+                self.assertTrue(math.isclose(output[1],correct_loss,abs_tol=1e-23,rel_tol=1e-11),(output[1],correct_loss))
 
     def test_all_twenty_topics_exist(self):
         for pid in range(39,59):

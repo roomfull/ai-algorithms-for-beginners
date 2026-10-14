@@ -3,6 +3,7 @@ import sys
 import math
 
 
+
 def solve(raw):
     lines = raw.strip().splitlines()
     labels = list(map(int, raw.split()))

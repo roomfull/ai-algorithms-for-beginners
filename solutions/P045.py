@@ -1,6 +1,7 @@
 """P045：稳定sigmoid与分类。"""
 import sys
 import math
+from fractions import Fraction
 
 
 def sigmoid(z):
@@ -13,13 +14,16 @@ def sigmoid(z):
 def solve(raw):
     lines = raw.strip().splitlines()
     n, d = map(int, lines[0].split())
-    points = [list(map(float, s.split())) for s in lines[1:n+1]]
-    w = list(map(float, lines[n+1].split()))
-    b = float(lines[n+2])
+    # 直接从输入字符串构造分数，保留十进制数的精确值。
+    points = [list(map(Fraction, s.split())) for s in lines[1:n+1]]
+    w = list(map(Fraction, lines[n+1].split()))
+    b = Fraction(lines[n+2])
     result = []
     for x in points:
-        p = sigmoid(sum(a*t for a, t in zip(w, x))+b)
-        result.extend([f'{p:.12g}', str(int(p >= 0.5))])
+        score = sum(a*t for a, t in zip(w, x))+b
+        p = sigmoid(float(score))
+        # sigmoid严格递增；依据精确分数的符号判类，不能依据舍入后的概率。
+        result.extend([f'{p:.12g}', str(int(score >= 0))])
     return '\n'.join(result)
 
 

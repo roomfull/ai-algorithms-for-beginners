@@ -3,6 +3,7 @@ import sys
 import math
 
 
+
 def solve(raw):
     lines = raw.strip().splitlines()
     head = lines[0].split()

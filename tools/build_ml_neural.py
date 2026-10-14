@@ -35,7 +35,7 @@ add(39, 'KNN 近邻排序',
     '一行k个整数近邻下标，按距离从小到大排列。',
     '查询(0,0)到三点(1,0)、(-1,0)、(0,2)的距离平方是1、1、4。前两点平局按下标0、1；k=2，输出0 1。',
     ['先逐维作差并平方。', '给每个距离配上原始下标。', '排序键是(distance,index)，取排序列表[:k]，输出其中的index。'],
-    '时间 O(nd+n log n)，空间 O(n+d)。',
+    '时间 O(nd+n log n)，空间 O(nd+n+d)，包含读取后保存的n×d输入矩阵、距离列表和查询。',
     '不要先排序输入点后丢掉原下标；不要用曼哈顿距离；题目限定整数，Python整数平方和精确。',
     [case('等距离按下标', '3 2 2\n1 0\n-1 0\n0 2\n0 0', '0 1'),
      case('单点', '1 1 1\n7\n2', '0'),
@@ -50,7 +50,7 @@ add(40, '单样本 KNN 多数投票',
     '一行一个整数预测标签。',
     '到0的三个点是1、-1、3，距离平方1、1、9，标签分别9、2、9。k=2选下标0和1，各一票，较小标签2胜出。',
     ['选择邻居与投票是两个步骤。', '字典counts[label]保存票数。', '在出现的标签中最小化(-counts[label],label)。'],
-    '时间 O(nd+n log n+k)，空间 O(n+d+k)。',
+    '时间 O(nd+n log n+k)，空间 O(nd+n+d+k)，包含训练矩阵、距离列表、查询与票数。',
     '标签无需连续；距离平局按样本下标，票数平局按标签，两种平局不能混淆。',
     [case('票数平局取小标签', '3 1 2\n9 1\n2 -1\n9 3\n0', '2'),
      case('多数获胜', '3 1 3\n9 1\n2 -1\n9 3\n0', '9'),
@@ -331,6 +331,36 @@ add(58, '标量 GAN 损失与交替更新',
      case('噪声零权重不动','1 0 0.7 0 0 0 1 1',f'{2*math.log(2):.12g} {math.log(2):.12g}\n0.7 0.25 0.5 0')],source=GAN)
 
 
+TOPICS[45]['cases'].extend([
+    case('精确十进制零分数', '1 3\n1 1 1\n9.1 0.2 -9.3\n0', '0.5 1'),
+    case('近零负分数按符号分类', '1 1\n-0.000001\n0.000001\n0', '0.5 0'),
+])
+TOPICS[49]['cases'].append(case('负小数精确中点', '2 1\n0 -0.4\n1 -0.2', '0\n-0.3 0'))
+TOPICS[50]['cases'].append(case('负小数中点等于走左支', '2 1 4 1\n0 -0.4\n1 -0.2\n-0.300001\n-0.3\n-0.299999\n-0.2', '0\n0\n1\n1'))
+TOPICS[53]['cases'].extend([
+    case('微小eps负类错误边界', '1 1 1.000033e-12\n0 1\n0 1', '27.630988116473038 1.0000330000005e-12'),
+    case('微小eps正类错误边界', '1 1 1.000033e-12\n1 0\n0 1', '27.630988116473038 1.0000330000005e-12'),
+])
+
+# 审查修复同步题面、题解和脚手架，保证重建材料不会恢复旧数值约定。
+TOPICS[45]['task'] += (' 分数z用原始十进制输入的精确有理数计算；sigmoid所需指数计算时才转float。'
+                       '未舍入的p≥0.5等价于精确z≥0，因此标签直接按z的符号判定；显示概率可能舍入成0.5，标签仍取精确符号。')
+TOPICS[45]['hints'][0] = '用Fraction(token)从原输入字符串读取特征、权重与偏置，精确求内积分数。'
+TOPICS[45]['hints'][2] = '先求精确score；对float(score)分正负算稳定sigmoid；标签用int(score>=0)，不用格式化后或舍入后的概率。'
+TOPICS[45]['pitfalls'] += ' Fraction必须从原字符串构造，不要先转float；9.1+0.2-9.3精确是0。近零负分数概率显示0.5时仍预测0。'
+for pid in (49,50):
+    TOPICS[pid]['task'] += (' 特征、阈值与查询的大小关系按输入十进制数精确比较；用Fraction从原字符串读取，'
+                           '中点仍保持Fraction，不对x≤阈值的边界加容差。1e-12只用于Gini评分并列/增益判断。')
+    TOPICS[pid]['pitfalls'] += ' (-0.4+-0.2)/2精确等于-0.3，查询-0.3必须走左支；禁止先转float再构造Fraction。'
+TOPICS[49]['hints'][2] += ' 特征与阈值保留Fraction，最后格式化阈值才转float。'
+TOPICS[50]['hints'][2] += ' 特征、查询、中点都用Fraction，边界判断保持精确。'
+TOPICS[53]['task'] += (' 实现时可等价地先取真实类概率q（y=1取p，y=0取1-p），直接对q裁剪并求-ln(q)。'
+                       'q≤eps时直接用-log(eps)，q≥1-eps时用-log1p(-eps)，避免先构造1-eps再相减恢复eps或损失微小正确类损失精度。')
+TOPICS[53]['hints'][2] = ('二分类先取q=p if y==1 else 1-p；多分类取q=probs[target]。'
+                         'q≤eps返回-log(eps)，q≥1-eps返回-log1p(-eps)，其余返回-log(q)，最后按n平均。')
+TOPICS[53]['pitfalls'] += ' eps很小时1-(1-eps)不等于原浮点eps；直接对真实类概率clip，并为上下边界选稳定log公式。'
+
+
 def chapter(pid):
     return '05_machine_learning' if pid <= 50 else '06_neural_networks'
 
@@ -356,6 +386,9 @@ SCAFFOLDS = {
     57: 'h, w, kh, kw, stride, pad = map(int, lines[0].split())\nx = [list(map(float, line.split())) for line in lines[1:h+1]]\nkernel = [list(map(float, line.split())) for line in lines[h+1:h+1+kh]]\n# 初始化输出为全0，散射累加，不能覆盖。',
     58: 'real, z, a, g, w, b, lr_d, lr_g = map(float, raw.split())\n# 先保存fake，再计算D梯度和新w,b，最后计算G梯度。',
 }
+for pid in (45,49,50):
+    SCAFFOLDS[pid] = SCAFFOLDS[pid].replace('map(float,', 'map(Fraction,')
+SCAFFOLDS[45] = SCAFFOLDS[45].replace('bias = float(lines[n+2])', 'bias = Fraction(lines[n+2])')
 
 
 def write_materials():
@@ -431,9 +464,11 @@ def write_materials():
             readme=readme.replace(f'[下一题](../P{pid+1:03}/README.md)', '[后续学习路线](../../../../README.md)')
         (folder/'README.md').write_text(readme, encoding='utf-8')
         scaffold=t['scaffold'] or SCAFFOLDS[pid]
+        fraction_import = 'from fractions import Fraction\n' if pid in (45,49,50) else ''
         exercise=f'''"""{ident}：练习脚手架，保持独立；不要导入solutions。"""
 import sys
 import math
+{fraction_import}
 
 
 def solve(raw):

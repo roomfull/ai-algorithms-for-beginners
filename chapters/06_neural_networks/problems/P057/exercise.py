@@ -3,6 +3,7 @@ import sys
 import math
 
 
+
 def solve(raw):
     lines = raw.strip().splitlines()
     h, w, kh, kw, stride, pad = map(int, lines[0].split())

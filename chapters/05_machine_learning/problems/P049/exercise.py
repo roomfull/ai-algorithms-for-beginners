@@ -1,6 +1,8 @@
 """P049：练习脚手架，保持独立；不要导入solutions。"""
 import sys
 import math
+from fractions import Fraction
+
 
 
 def solve(raw):
@@ -9,7 +11,7 @@ def solve(raw):
     rows = []
     for line in lines[1:n+1]:
         tokens = line.split()
-        rows.append((int(tokens[0]), list(map(float, tokens[1:]))))
+        rows.append((int(tokens[0]), list(map(Fraction, tokens[1:]))))
     # rows中的元素是(label, features)。
     # TODO：完成计算并返回结果字符串（可用空格连接一行，换行连接多行）。
     raise NotImplementedError("请按题目提示完成这里")

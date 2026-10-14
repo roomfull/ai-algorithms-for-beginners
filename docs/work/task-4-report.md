@@ -1,5 +1,7 @@
 # Task 4 交付报告
 
+最新状态：审查修复轮1已完成，20题、108案例、14项独立unittest全部通过；第05章checker65/65，第06章43/43。详细修复与RED/GREEN证据见末节。以下102案例/11测试为保留的首次交付历史。
+
 ## 完成范围
 
 已完成第05章 `chapters/05_machine_learning` 的P039–P050与第06章 `chapters/06_neural_networks` 的P051–P058，共20题、102个独立案例。每题有完整题面与边界、首例输入/输出与手算、三级提示、读取输入的未完成练习脚手架、独立可运行参考代码、题解与实际实现复杂度。
@@ -45,6 +47,27 @@ RED日志为 `task-4-red-39-44.txt`、`task-4-red-45-47.txt`、`task-4-red-48-50
 - 卷积为不翻核的单通道互相关；CNN明确卷积和池化的独立stride。转置卷积dilation=1、output_padding=0、无偏置，散射越界丢弃，不宣称逆运算。
 - GAN仅标量一轮模拟，D损失两项求和，G采用非饱和目标，D→G交替且G使用新D；不是完整图像GAN训练。
 
-## 待工具接口统一事项
+## 首轮工具接口事项（修复轮1已复核）
 
-为满足严格整数行要求，P044/P045/P049的每个case新增 `line_modes`：P044中心行float、最终标签行int；P045每样本概率float与标签int分别两行；P049特征索引int单独一行、阈值/Gini为float行。独立unittest以十进制整数正则严格验证这些行。当前checker仍按整题mode比较，暂忽略该可选元数据，因此本包checker通过尚不代表其已会拒绝混合题的小数标签。按主线程安排，本包没有改check.py；工具包补充line_modes校验与比较后需要再跑统一验收。
+为满足严格整数行要求，P044/P045/P049的每个case新增 `line_modes`：P044中心行float、最终标签行int；P045每样本概率float与标签int分别两行；P049特征索引int单独一行、阈值/Gini为float行。独立unittest以十进制整数正则严格验证这些行。首次交付时checker尚未识别该元数据；工具包现已补充校验与比较，修复轮1用升级后的checker重跑两章，65/65与43/43均通过。本包没有改check.py。
+
+## 审查修复轮1
+
+根据 [独立审查](task-4-review.md) 修复3个数值错误与1个复杂度漏项，先保存独立回归测试与6个新增cases，再改参考实现。
+
+- P045：原输入 `9.1 0.2 -9.3` 的精确和为0，旧浮点累加错误地产生负分数并预测0。现在从原始字符串直接构造Fraction，精确计算内积与偏置；仅求sigmoid时转float；标签依据精确score≥0，避免舍入概率影响符号判断。新增精确零与近零负分数案例。
+- P049/P050：特征、查询与相邻值中点保持Fraction；查询-0.3精确等于(-0.4+-0.2)/2，按≤走左支，不给边界添加容差。Gini评分的1e-12约定不变；P049仅格式化阈值时转float。新增负十进制中点与两侧/等号查询案例。
+- P053：直接裁剪真实类概率q，与题面clip BCE数学等价。q≤eps直接返回-log(eps)；q≥1-eps用-log1p(-eps)。避免1-(1-eps)消减误差，同时改善微小正确类损失。独立70位Decimal oracle验证eps=1.000033e-12时错误类损失27.630988116473038与正确类损失约1.0000330000005e-12；新增正、负类边界案例。
+- P039/P040：空间复杂度分别更正为O(nd+n+d)、O(nd+n+d+k)，明确计入保存的训练矩阵；题解和生成器同步。
+
+P045/P049/P050脚手架直接读取Fraction，题面、题解、两章教学入口和生成器均同步，重建不恢复旧约定。受题面有限范围/最多6位小数约束，有理数运算位数有界，复杂度仍按算术操作数计。
+
+RED实际命令：
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 -m unittest tests.test_ml_neural.MLNeuralTests.test_sigmoid_classification_uses_exact_decimal_score_sign tests.test_ml_neural.MLNeuralTests.test_cart_decimal_midpoint_goes_left_without_boundary_epsilon tests.test_ml_neural.MLNeuralTests.test_bce_tiny_epsilon_against_independent_decimal_oracle -v
+```
+
+实际观察3项测试、4处断言失败（P045、P050、P053负例BCE与正例对应的多分类CE），保存 [轮1 RED日志](task-4-fix-round1-red.txt)。实现后同命令3项通过，保存 [focused GREEN](task-4-fix-round1-focused-green.txt)。随后运行本报告前述完整unittest与两章checker命令，实际14项unittest通过、05章65/65、06章43/43，分别保存 [完整GREEN](task-4-fix-round1-full-green.txt)、[05章GREEN](task-4-fix-round1-checker-05.txt)、[06章GREEN](task-4-fix-round1-checker-06.txt)。总案例108：P045/P050/P053各7例，P049/P058各6例，其余15题各5例。
+
+未修改共享文件，未Git提交，未创建额外代理；原练习文件仍保留NotImplementedError。

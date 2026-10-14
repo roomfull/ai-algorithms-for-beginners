@@ -3,6 +3,7 @@ import sys
 import math
 
 
+
 def solve(raw):
     lines = raw.strip().splitlines()
     real, z, a, g, w, b, lr_d, lr_g = map(float, raw.split())

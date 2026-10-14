@@ -1,6 +1,6 @@
 # P049 连续特征的最佳二叉切分
 
-对每个特征，将不同值升序排列，相邻不同值的中点作为阈值t。左支x_j≤t，右支x_j>t；评分为(|L|Gini(L)+|R|Gini(R))/n。先找所有候选评分最小值m，再在评分≤m+1e-12的候选中按特征索引、阈值升序取第一项。此题返回最佳候选，即使增益为0；没有候选才输出哨兵。
+对每个特征，将不同值升序排列，相邻不同值的中点作为阈值t。左支x_j≤t，右支x_j>t；评分为(|L|Gini(L)+|R|Gini(R))/n。先找所有候选评分最小值m，再在评分≤m+1e-12的候选中按特征索引、阈值升序取第一项。此题返回最佳候选，即使增益为0；没有候选才输出哨兵。 特征、阈值与查询的大小关系按输入十进制数精确比较；用Fraction从原字符串读取，中点仍保持Fraction，不对x≤阈值的边界加容差。1e-12只用于Gini评分并列/增益判断。
 
 ## 输入与约束
 
@@ -44,7 +44,7 @@
 
 <details><summary>提示 3</summary>
 
-存候选(score,feature,threshold)，找全局最小score；筛score≤min+1e-12，再按(feature,threshold)选第一项。
+存候选(score,feature,threshold)，找全局最小score；筛score≤min+1e-12，再按(feature,threshold)选第一项。 特征与阈值保留Fraction，最后格式化阈值才转float。
 
 </details>
 

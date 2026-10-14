@@ -17,3 +17,7 @@
 2026-10-14：Task3 原代理会话在应用闪退后消失；磁盘保留16题 cases.json、案例生成器与独立测试，尚无P023–P038参考解。由 preprocessing_resume 接续，要求每2–4题写入磁盘并维护 task-3-checkpoint.md。Task1/2提交及独立环境完整。
 
 Task 3: fix round 1/5 complete (3 addressed, 0 open). Commit aa3a274; reviewer ran 3 new targeted regression methods and confirmed all passed. No new issues in fix diff.
+
+Task 4: content committed fa791e9; 20 problems/102 cases/11 independent tests passed. review_ml found 3 P2 numeric boundaries (P045 exact zero, P050 decimal midpoint, P053 tiny-eps BCE) and one P3 complexity correction (P039/P040), fix round1 pending.
+
+Mixed checker: complete e01c815, 38 tests passed; P044/P045/P049 integration 15/15 passed. review_checker_mixed approved spec/quality, no findings, backward compatibility and full shape-first semantics verified.
