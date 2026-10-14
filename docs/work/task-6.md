@@ -15,3 +15,13 @@ REFERENCES 逐专题权威来源、采用的约定和区别；MAINTAINING 描述
 用现有 checker 全部答案验证，用 unittest discover 全套验证。完整走第一题：临时复制试错版得到错误、读题面提示、正确版通过，不改正式练习；记录命令与结果。修复本包问题，别改其他工作包而不向主代理报告。
 
 不 Git commit；生成器仅 tools/build_mock_exams.py。报告 docs/work/task-6-report.md。
+
+## 集成补充（此前工作包已验证的接口）
+
+- 混合输出可给每个case设置 `line_modes`，逐行指定int/float/text；整数标签不能靠全局float容差判定。
+- 前五包已完成80题与411个案例（111+82+108+110）；测试方法数合计79（检查器38、基础4、预处理9、ML14、系统14）。最终数字需按磁盘实际统计。
+- 十进制边界要明确且可复现：训练集常量列显式判定；分类平票/聚类距离/排名平票说明精确或容差规则；量化半格与floor比例可从原字符串构造Fraction。不要从float反构造Fraction。
+- P069审查发现float在数学L1恰等于tol时会误判标记。修复采用Fraction精确迭代并将本教学题约束为n≤20、m≤100、max_iter≤200。M02B若输出精确轮数/排序平票，也须考虑此边界，可用相同小规模精确计算；不要无说明添加epsilon改变题面规则。
+- P001完整试错演练已记录于 docs/work/beginner-walkthrough.md，正式练习没有改变。读该证据；除非入口/题目改变了流程，不必重复同一测试。
+- docs/START_HERE.md 仍含基础阶段“题目后续生成”的临时文字，本包须替换成真实可点击入口；根README同样更新。
+- 每完成一卷或一组文档立即落盘并更新 docs/work/task-6-checkpoint.md，防止应用闪退丢失进度。

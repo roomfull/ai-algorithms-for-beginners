@@ -1,0 +1,20 @@
+Task 5 修复轮1：P069阈值 / P060空间复杂度
+
+RED命令：.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_system_algorithms.py -k exact_decimal_stop_boundary
+实际：Ran 1 test in 0.001s; FAILED (failures=1)
+断言：actual [[1.0,0.0],[0.495,0.505]] != expected [[1,1],[0.495,0.505]]
+
+精确算术探索（强制执行，不提前按tol停止）：n=200,m=2000,139轮,4.0438秒,分母4074bit；n=20,m=100,200轮,0.4308秒,分母4955bit。时间仅记录本机实验。
+
+命令：.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_system_algorithms.py
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.151s
+
+OK
+退出码：0
+
+命令：.\.venv\Scripts\python.exe check.py --chapter 07 --solution
+
+通过 62/62 个案例，共 12 题
+退出码：0

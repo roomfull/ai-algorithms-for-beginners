@@ -126,6 +126,14 @@ class SystemAlgorithmsTests(unittest.TestCase):
         self.assertAlmostEqual(sum(out[1]),1,places=10)
         self.assertAlmostEqual(out[1][0],5/14,places=6)
 
+    def test_pagerank_exact_decimal_stop_boundary(self):
+        # 有理数首轮oracle：(.495,.505)，L1=1/100，避免二进制浮点误判。
+        expected=[Fraction('0.495'),Fraction('0.505')]
+        delta=sum(abs(p-Fraction(1,2)) for p in expected)
+        self.assertEqual(delta,Fraction('0.010'))
+        self.assertEqual(self.floats(69,'2 1 0.02 0.010 1\n0 1\n'),[[1,1],[0.495,0.505]])
+        self.assertEqual(self.floats(69,'2 1 0.02 0.009999 1\n0 1\n'),[[1,0],[0.495,0.505]])
+
     def test_ratio_decimal_floor_and_deterministic_ties(self):
         for n,ratio in ((100,'0.29'),(10,'0.7'),(3,'0.5'),(4,'0'),(4,'1')):
             count=(n*Fraction(ratio)).numerator//(n*Fraction(ratio)).denominator

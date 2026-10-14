@@ -49,6 +49,24 @@
         "int",
         "float"
       ]
+    },
+    {
+      "name": "十进制相等阈值",
+      "input": "2 1 0.02 0.010 1\n0 1\n",
+      "expected": "1 1\n0.495 0.505\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "十进制略低阈值",
+      "input": "2 1 0.02 0.009999 1\n0 1\n",
+      "expected": "1 0\n0.495 0.505\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
     }
   ]
 }

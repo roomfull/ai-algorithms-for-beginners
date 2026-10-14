@@ -78,9 +78,10 @@ def materialize(ids=None):
             replacement=f'[下一章](../../../{nextchapter}/README.md)' if nextchapter else '[模拟卷与学习路线](../../../../README.md)'
             text=text.replace(f'[下一题](../P{pid+1:03}/README.md)',replacement)
         (folder/'README.md').write_text(text,encoding='utf-8')
+        fraction_import='from fractions import Fraction\n' if pid==69 else ''
         scaffold=f'''"""{s['id']} {s['title']}：完成后只向标准输出写题目要求的结果。"""
 import sys
-
+{fraction_import}
 
 def solve(raw):
     # 1. 按题面解析输入；注意整数、浮点和精确小数字符串的区别。
@@ -138,7 +139,7 @@ add(60,'有向图入度与出度','有向边u→v只给u增加出度，给v增�
     '0→1与0→2让0出度为2；2→1让1入度为2、2入出度各1。',
     ['区分“指向我”与“从我出发”。','准备长度n的两个计数数组。','每次只执行 outdegree[u]+=1 与 indegree[v]+=1。'],
     '用两个独立整数数组分别计数。输入一次有向边，只在其起点的出度和终点的入度上加一。所有入度之和和出度之和都等于m。',
-    '时间O(n+m)，辅助空间O(n)。无需存储边。','不要把两个方向都加；反向边不是重复；自环必须计入两种度数。',[
+    '时间O(n+m)，当前raw.split持有全部输入tokens，总辅助空间O(n+m)；计数数组本身O(n)，不另存边表。','不要把两个方向都加；反向边不是重复；自环必须计入两种度数。',[
 case('多对一','3 3\n0 1\n0 2\n2 1\n','0 2\n2 0\n1 1\n'),case('单自环','1 1\n0 0\n','1 1\n'),
 case('孤立点','2 0\n','0 0\n0 0\n'),case('反向共存','2 2\n0 1\n1 0\n','1 1\n1 1\n'),
 case('链','4 3\n3 2\n2 1\n1 0\n','1 0\n1 1\n1 1\n0 1\n')])
@@ -233,18 +234,20 @@ case('均匀环','3 3 0.85\n0 1\n1 2\n2 0\n0.333333 0.333334 0.333333\n','0.3333
 case('零阻尼','2 1 0\n1 0\n1 0\n','0.5 0.5\n'),
 case('自环单点','1 1 0.9\n0 0\n1\n','1\n')],mode='float',source='https://networkx.org/documentation/stable/_modules/networkx/algorithms/link_analysis/pagerank_alg.html')
 
-add(69,'PageRank迭代至收敛','从均匀概率p[i]=1/n开始，重复P068的同步更新（包括悬挂点均分）。每轮更新后计算L1变化量Σ|q[i]-p[i]|；≤tol即停止并标记收敛，最多max_iter轮。输出最后已完成的q。此处直接使用tol，不采用某些库的n*tol阈值。',
-    '首行 n m alpha tol max_iter；随后m行 u v。1≤n≤200，0≤m≤2000，0≤alpha<1，0<tol≤1，1≤max_iter≤10000；允许自环，无重复有向边。',
+add(69,'PageRank迭代至收敛','从均匀概率p[i]=1/n开始，重复P068的同步更新（包括悬挂点均分）。每轮更新后计算L1变化量Σ|q[i]-p[i]|；≤tol即停止并标记收敛，最多max_iter轮。所有概率与L1用Fraction精确有理数计算，alpha与tol直接从原始十进制字符串构造Fraction，输出时才转float。输出最后已完成的q。此处直接使用tol，不采用某些库的n*tol阈值。',
+    '首行 n m alpha tol max_iter；随后m行 u v。1≤n≤20，0≤m≤100，0≤alpha<1，0<tol≤1，1≤max_iter≤200；允许自环，无重复有向边。限定小图是为了直观、精确地验证收敛边界；大图通常用浮点迭代，本题不模拟其性能。',
     '第一行 实际轮数 是否收敛（1/0）；第二行n个最后概率。即使初始分布已经是固定点，也先做一轮再判断。',
     '均匀初值(0.5,0.5)，alpha=0.8，0→1。前3轮分别为(0.3,0.7)、(0.38,0.62)、(0.348,0.652)。L1依次0.4,0.16,0.064；第3轮≤0.1，输出3 1。',
-    ['每轮调用与单轮相同的概率流过程。','先计算delta，再用q替换p；收敛输出的是q。','for step in 1..max_iter：构造q；delta=sum(abs(q[i]-p[i]))；p=q；若delta<=tol则标记并break。'],
-    '用两数组同步更新；每轮对无出边质量均分，再沿边传递，最后计算L1差。轮数从1计。达到上限但差仍大于tol时明确输出0，不把强制终止称作收敛。',
-    'K实际轮时，时间O(K(n+m))，空间O(n+m)；不存历史迭代。','不能拿每元素差替代L1；阈值不是n*tol；未收敛仍返回末轮概率；不检查均匀初值并输出0轮。',[
+    ['从原字符串构造Fraction(alpha)、Fraction(tol)，均匀初值用Fraction(1,n)。','所有概率流与delta保持Fraction，先求delta再用q替换p；输出时才转float。','for step in 1..max_iter：精确构造q；delta=sum(abs(q[i]-p[i]))；p=q；若delta<=tol则标记并break。不加epsilon。'],
+    '用两数组同步更新；每轮对无出边质量均分，再沿边传递，最后精确计算L1差。alpha、tol和均匀初值均以Fraction构造，避免L1数学上等于十进制tol却因二进制误差被误判。轮数从1计。达到上限但差仍大于tol时明确输出0，不把强制终止称作收敛。',
+    'K为实际轮数，进行O(K(n+m))次有理数运算。设过程中最大整数位数为B，一次B位有理数运算上界为C(B)，则时间O(K(n+m)C(B))，不能将Fraction运算视为恒定成本。邻接表与tokens有O(n+m)项，概率数组O(n)个有理数，其整数位存储O(nB)。若alpha=a/b，L=lcm(n,所有非零出度)，分母整除n*(b*L)^K，故B可随K增长；不存历史迭代。','不能拿每元素差替代L1；阈值不是n*tol；不能加宽泛epsilon；不能先float化再转Fraction；未收敛仍返回末轮概率；不检查均匀初值并输出0轮。',[
 case('三轮收敛','2 1 0.8 0.1 10\n0 1\n','3 1\n0.348 0.652\n',['int','float']),
 case('达到上限','2 1 0.8 0.01 1\n0 1\n','1 0\n0.3 0.7\n',['int','float']),
 case('无边固定点','3 0 0.9 0.001 5\n','1 1\n0.333333333333 0.333333333333 0.333333333333\n',['int','float']),
 case('均匀环固定点','3 3 0.85 0.000001 5\n0 1\n1 2\n2 0\n','1 1\n0.333333333333 0.333333333333 0.333333333333\n',['int','float']),
-case('恰好阈值','2 1 0.5 0.25 5\n0 1\n','1 1\n0.375 0.625\n',['int','float'])],mode='float',source='https://networkx.org/documentation/stable/_modules/networkx/algorithms/link_analysis/pagerank_alg.html')
+case('恰好阈值','2 1 0.5 0.25 5\n0 1\n','1 1\n0.375 0.625\n',['int','float']),
+case('十进制相等阈值','2 1 0.02 0.010 1\n0 1\n','1 1\n0.495 0.505\n',['int','float']),
+case('十进制略低阈值','2 1 0.02 0.009999 1\n0 1\n','1 0\n0.495 0.505\n',['int','float'])],mode='float',source='https://networkx.org/documentation/stable/_modules/networkx/algorithms/link_analysis/pagerank_alg.html')
 
 add(70,'图综合验收','对同一个无向简单图输出三个统计量：连通分量总数、整个图是否二分、三角形总数。必须独立判断二分图；没有三角形仍可能存在五边奇环。',
     '首行 n m；随后m行 u v。1≤n≤120，0≤m≤n(n-1)/2；无自环、无重边。',

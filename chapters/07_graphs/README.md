@@ -74,6 +74,8 @@ Kruskal把边从便宜到昂贵排序，若两端已属于同一集合就跳过�
 
 P069从均匀分布开始，每次完整更新后计算L1差 `sum(abs(q[i]-p[i]))`，差≤tol即停止；到max_iter仍不满足要标记未收敛。本章阈值就是tol；[NetworkX的PageRank源码](https://networkx.org/documentation/stable/_modules/networkx/algorithms/link_analysis/pagerank_alg.html)使用其自身的n*tol规则，不能把库的约定直接抄进本题。
 
+P069为精确收敛边界限定n≤20、m≤100、max_iter≤200，使用标准库Fraction从原小数字符串读取alpha和tol，均匀初值用Fraction(1,n)，概率与L1全程保留有理数，只在输出时转float。例如alpha=0.02的两点0→1，首轮是(0.495,0.505)，L1精确等于0.010，必须判收敛；阈值0.009999则不收敛。不能给阈值加epsilon，否则会改变题目定义。Fraction的分母位数随轮数增长，因此O(K(n+m))只是有理数操作次数，实际还需计大整数运算成本；P068仍是浮点单轮示范，真实大图常用浮点迭代。
+
 ## 练习顺序与自测
 
 | 题目 | 练习入口 | 重点 |

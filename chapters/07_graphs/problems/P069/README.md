@@ -1,10 +1,10 @@
 # P069 PageRank迭代至收敛
 
-从均匀概率p[i]=1/n开始，重复P068的同步更新（包括悬挂点均分）。每轮更新后计算L1变化量Σ|q[i]-p[i]|；≤tol即停止并标记收敛，最多max_iter轮。输出最后已完成的q。此处直接使用tol，不采用某些库的n*tol阈值。
+从均匀概率p[i]=1/n开始，重复P068的同步更新（包括悬挂点均分）。每轮更新后计算L1变化量Σ|q[i]-p[i]|；≤tol即停止并标记收敛，最多max_iter轮。所有概率与L1用Fraction精确有理数计算，alpha与tol直接从原始十进制字符串构造Fraction，输出时才转float。输出最后已完成的q。此处直接使用tol，不采用某些库的n*tol阈值。
 
 ## 输入与约束
 
-首行 n m alpha tol max_iter；随后m行 u v。1≤n≤200，0≤m≤2000，0≤alpha<1，0<tol≤1，1≤max_iter≤10000；允许自环，无重复有向边。 保证输入合法。 顶点编号为0..n-1。 所有小数最多6位，有限且绝对值≤10000，除非本题另有说明。
+首行 n m alpha tol max_iter；随后m行 u v。1≤n≤20，0≤m≤100，0≤alpha<1，0<tol≤1，1≤max_iter≤200；允许自环，无重复有向边。限定小图是为了直观、精确地验证收敛边界；大图通常用浮点迭代，本题不模拟其性能。 保证输入合法。 顶点编号为0..n-1。 所有小数最多6位，有限且绝对值≤10000，除非本题另有说明。
 
 ## 输出
 
@@ -29,19 +29,19 @@
 
 <details><summary>提示 1</summary>
 
-每轮调用与单轮相同的概率流过程。
+从原字符串构造Fraction(alpha)、Fraction(tol)，均匀初值用Fraction(1,n)。
 
 </details>
 
 <details><summary>提示 2</summary>
 
-先计算delta，再用q替换p；收敛输出的是q。
+所有概率流与delta保持Fraction，先求delta再用q替换p；输出时才转float。
 
 </details>
 
 <details><summary>提示 3</summary>
 
-for step in 1..max_iter：构造q；delta=sum(abs(q[i]-p[i]))；p=q；若delta<=tol则标记并break。
+for step in 1..max_iter：精确构造q；delta=sum(abs(q[i]-p[i]))；p=q；若delta<=tol则标记并break。不加epsilon。
 
 </details>
 
