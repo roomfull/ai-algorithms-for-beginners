@@ -7,14 +7,18 @@ def format_row(values):
     return " ".join(format(v, ".12g") for v in values)
 
 
-# 算法关键：预存每个基点前 k 个邻居；第 r 条使用 r % m 基点与输入 q 邻居，再做统一系数插值。
+# 算法关键：用Fraction(原始坐标文本)求精确平方距离，不能先转float；排序后预存前 k 个邻居，第 r 条按 r % m 与 q 选点，转float后插值输出。
+from fractions import Fraction
+
+
 def solve(raw):
     lines = raw.splitlines()
     n, d, k, g = map(int, lines[0].split())
     samples = []
     for i, line in enumerate(lines[1:n+1]):
         parts = line.split()
-        samples.append((int(parts[0]), list(map(float, parts[1:])), i))
+        # 从原文本解析有理数，保留输入十进制坐标的精确距离关系。
+        samples.append((int(parts[0]), list(map(Fraction, parts[1:])), i))
     counts = [sum(label == c for label, _, _ in samples) for c in (0, 1)]
     minority_label = 0 if counts[0] < counts[1] else 1
     minority = [(x, index) for label, x, index in samples if label == minority_label]
@@ -32,8 +36,9 @@ def solve(raw):
         q_text, lam_text = line.split()
         q, lam = int(q_text), float(lam_text)
         base = r % len(minority)
-        x = minority[base][0]
-        z = minority[neighbors[base][q]][0]
+        # 邻居已经用精确距离确定；输出插值允许题面规定的浮点误差。
+        x = list(map(float, minority[base][0]))
+        z = list(map(float, minority[neighbors[base][q]][0]))
         output.append(format_row(x[j]+lam*(z[j]-x[j]) for j in range(d)))
     return '\n'.join(output)
 

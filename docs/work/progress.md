@@ -15,3 +15,5 @@
 ## 崩溃恢复记录
 
 2026-10-14：Task3 原代理会话在应用闪退后消失；磁盘保留16题 cases.json、案例生成器与独立测试，尚无P023–P038参考解。由 preprocessing_resume 接续，要求每2–4题写入磁盘并维护 task-3-checkpoint.md。Task1/2提交及独立环境完整。
+
+Task 3: fix round 1/5 in_progress (review_preprocessing found 3 P2: P026 decimal constant Z-score; P030 decimal equal-distance tie; P028/P037 integer checker mode). Base 415cd0a. Implementer instructed to add RED regression tests and synchronize generator/materials.

@@ -1,5 +1,6 @@
 """独立数学性质和手算案例；不导入参考答案。"""
 from pathlib import Path
+import importlib.util
 import json
 import math
 import subprocess
@@ -37,6 +38,29 @@ class PreprocessingFeatureTests(unittest.TestCase):
         self.assertAlmostEqual(sum(r[0] for r in rows)/4, 0)
         self.assertAlmostEqual(sum(r[0]**2 for r in rows)/4, 1)
         self.assertEqual([r[1] for r in rows], [0]*4)
+
+    def test_zscore_decimal_constant_column_is_exactly_zero(self):
+        self.assertEqual(self.run_solution(26, '3 1\n0.1\n0.1\n0.1\n'), [[0], [0], [0]])
+
+    def test_smote_decimal_distance_tie_uses_original_index(self):
+        # 两邻点离0.3的十进制距离都是0.1，输入下标1的0.4先于下标2的0.2。
+        rows = self.run_solution(30, '7 1 1 1\n1 0.3\n1 0.4\n1 0.2\n0 1\n0 2\n0 3\n0 4\n0 1\n')
+        self.assertEqual(rows, [[0.4]])
+
+    def test_integer_metadata_rejects_fractional_output(self):
+        spec = importlib.util.spec_from_file_location('course_checker', ROOT / 'check.py')
+        checker = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(checker)
+        for pid, chapter in ((28, '03_preprocessing'), (37, '04_features')):
+            with self.subTest(pid=pid):
+                data = json.loads((ROOT / 'chapters' / chapter / 'problems' /
+                                   f'P{pid:03}' / 'cases.json').read_text(encoding='utf-8'))
+                expected = data['cases'][0]['expected']
+                rows = [line.split() for line in expected.splitlines()]
+                rows[0][0] += '.0000001'  # 浮点模式容差会误接受这个非整数。
+                actual = '\n'.join(' '.join(row) for row in rows)
+                self.assertFalse(checker.compare_output(actual, expected, data['mode'])[0])
+                self.assertEqual(data['mode'], 'int')
 
     def test_smote_excludes_closer_majority_and_endpoints(self):
         rows = self.run_solution(30, '5 1 1 2\n1 0\n0 0.01\n1 10\n0 0.02\n0 0.03\n0 0\n0 1\n')

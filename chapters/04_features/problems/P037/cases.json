@@ -2,7 +2,7 @@
   "id": "P037",
   "chapter": "04",
   "title": "相邻卡方合并分箱",
-  "mode": "float",
+  "mode": "int",
   "requires": [],
   "cases": [
     {

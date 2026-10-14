@@ -2,7 +2,7 @@
   "id": "P028",
   "chapter": "03",
   "title": "确定性类别过采样",
-  "mode": "float",
+  "mode": "int",
   "requires": [],
   "cases": [
     {

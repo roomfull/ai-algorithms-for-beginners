@@ -34,7 +34,8 @@ add(26, '总体 Z-score 标准化', [
  ('1 1\n9\n','0\n'),
  ('3 1\n-1\n0\n1\n', f'{-math.sqrt(1.5)}\n0\n{math.sqrt(1.5)}\n'),
  ('2 2\n10 -4\n0 0\n','1 -1\n-1 1\n'),
- ('4 1\n1\n1\n3\n3\n','-1\n-1\n1\n1\n')])
+ ('4 1\n1\n1\n3\n3\n','-1\n-1\n1\n1\n'),
+ ('3 1\n0.1\n0.1\n0.1\n','0\n0\n0\n')])
 add(27, '先划分再拟合训练统计量', [
  ('4 1 2\n0\n10\n100\n5\n0 1 2 3\n','0\n1\n10\n0.5\n'),
  ('3 1 2\n0\n10\n5\n2 1 0\n','0\n1\n-1\n'),
@@ -46,7 +47,7 @@ add(28, '确定性类别过采样', [
  ('2 1 1 1\n0 1\n1 2\n','2\n0 1\n1 2\n'),
  ('2 1 4 1\n0 7\n1 8\n','5\n0 7\n1 8\n0 7\n0 7\n0 7\n'),
  ('3 1 1 4\n1 3\n0 2\n1 5\n','5\n1 3\n0 2\n1 5\n1 3\n1 5\n'),
- ('2 2 2 2\n0 -1 2\n1 4 6\n','4\n0 -1 2\n1 4 6\n0 -1 2\n1 4 6\n')])
+ ('2 2 2 2\n0 -1 2\n1 4 6\n','4\n0 -1 2\n1 4 6\n0 -1 2\n1 4 6\n')], 'int')
 add(29, 'SMOTE 线段插值', [
  ('2\n1 3\n5 7\n0.25\n','2 4\n'),
  ('1\n-2\n8\n0\n','-2\n'),
@@ -58,7 +59,8 @@ add(30, '小型确定性 SMOTE', [
  ('5 1 1 1\n0 50\n1 2\n0 2\n1 6\n0 3\n0 0\n','2\n'),
  ('5 1 1 1\n0 50\n1 2\n0 2\n1 6\n0 3\n0 1\n','6\n'),
  ('7 1 2 3\n1 0\n1 -2\n1 2\n0 0.1\n0 0.2\n0 0.3\n0 0.4\n0 0.5\n1 0.5\n0 0.5\n','-1\n0\n1\n'),
- ('5 2 1 3\n0 0 0\n1 1 1\n0 0 4\n1 2 2\n1 3 3\n0 0.25\n0 0.5\n0 0.75\n','0 1\n0 2\n0 3\n')])
+ ('5 2 1 3\n0 0 0\n1 1 1\n0 0 4\n1 2 2\n1 3 3\n0 0.25\n0 0.5\n0 0.75\n','0 1\n0 2\n0 3\n'),
+ ('7 1 1 1\n1 0.3\n1 0.4\n1 0.2\n0 1\n0 2\n0 3\n0 4\n0 1\n','0.4\n')])
 add(31, '原始词频 TF', [
  ('3\npear apple cat\napple pear apple\n','2 0 1\n'),
  ('1\nx\nx x x\n','3\n'),
@@ -102,7 +104,7 @@ add(37, '相邻卡方合并分箱', [
  ('3 2\n1 1 1\n2 1 1\n3 1 1\n','1 2 2 2\n3 3 1 1\n'),
  ('3 1\n-1 0 2\n0 3 0\n5 1 1\n','-1 5 4 3\n'),
  ('2 2\n1 0 0\n4 2 3\n','1 1 0 0\n4 4 2 3\n'),
- ('4 2\n0 1 0\n1 2 0\n2 0 1\n3 0 2\n','0 1 3 0\n2 3 0 3\n')])
+ ('4 2\n0 1 0\n1 2 0\n2 0 1\n3 0 2\n','0 1 3 0\n2 3 0 3\n')], 'int')
 add(38, '中位数与 MAD 鲁棒特征', [
  ('1 2 3 100\n','2.5 1\n-1.5 -0.5 0.5 97.5\n'),
  ('7\n','7 0\n0\n'),
@@ -276,13 +278,16 @@ material(25, '逐列计算 (x-min)/(max-min)，把每列缩放到 [0,1]；常量
 material(26, '逐列求均值 μ 与总体标准差 σ=sqrt(Σ(x-μ)²/n)，输出 (x-μ)/σ。常量列输出0。',
  '首行 n d；随后 n 行，每行 d 个实数。1≤n≤200，1≤d≤20；绝对值≤1000000。',
  '输出 n 行 d 列标准化结果。', '第1列均值3，平方偏差为1和1，总体方差1，标准差1，所以-1、1。第2列常量8，输出0。',
- ['先计算每列均值。', '用偏离均值的平方求方差，分母为 n，最后开平方。', '缓存 μ 和 σ；σ=0 的列输出0，其他列用 (x-μ)/σ。'],
- '时间 O(nd)，空间 O(nd)。', '本题分母为 n 而非 n-1；标准化不会自动使分布成为正态分布。', '''def solve(raw):
+ ['先计算每列均值。', '用偏离均值的平方求方差，分母为 n，最后开平方。', '先逐列检查所有输入值是否等于首行值，常量列直接设σ=0，避免十进制0.1求均值的舍入误差；其他列缓存μ和σ后用 (x-μ)/σ。'],
+ '时间 O(nd)，空间 O(nd)。', '本题分母为 n 而非 n-1；十进制常量列不能仅靠计算后的方差判断，应比较原列元素；标准化不会自动使分布成为正态分布。', '''def solve(raw):
     lines = raw.splitlines()
     n, d = map(int, lines[0].split())
     rows = [list(map(float, line.split())) for line in lines[1:n+1]]
+    constant = [all(row[j] == rows[0][j] for row in rows) for j in range(d)]
     means = [sum(row[j] for row in rows)/n for j in range(d)]
-    stds = [math.sqrt(sum((row[j]-means[j])**2 for row in rows)/n) for j in range(d)]
+    # 相同输入构成常量列；浮点均值的微小舍入不能制造出非零方差。
+    stds = [0.0 if constant[j] else
+            math.sqrt(sum((row[j]-means[j])**2 for row in rows)/n) for j in range(d)]
     return '\\n'.join(format_row(0.0 if stds[j] == 0 else (row[j]-means[j])/stds[j]
                                 for j in range(d)) for row in rows)''')
 
@@ -331,17 +336,21 @@ material(29, '给定同一类别的基点 x、邻点 z 和系数 λ，计算新�
     lam = float(lines[3])
     return format_row(x[j]+lam*(z[j]-x[j]) for j in range(d))''', SMOTE_SOURCE)
 
-material(30, '实现完整小型 SMOTE 的确定性教学版。少数类是原始样本数较少的类别（本题禁止并列）。按其输入顺序列为 minority。对每个少数类基点，只在其余少数类原样本内求平方欧氏距离；按 (距离, 原始输入下标) 升序取前 k 个邻居。第 r 条新样本以 minority[r % m] 为基点，使用该条输入的邻居名次 q（0起）和 λ 做 x+λ(z-x)。新样本不加入邻居搜索。',
- '首行 n d k g；随后 n 行：0/1标签及 d 个实数特征；再有 g 行：q λ。5≤n≤200，1≤d≤20，1≤g≤200；两类均存在且样本数不等；少数类数 m≥2；1≤k≤m-1，0≤q<k，0≤λ≤1，特征绝对值≤1000000。',
+material(30, '实现完整小型 SMOTE 的确定性教学版。少数类是原始样本数较少的类别（本题禁止并列）。按其输入顺序列为 minority。对每个少数类基点，只在其余少数类原样本内求平方欧氏距离；输入十进制坐标按精确数值比较距离，按 (距离, 原始输入下标) 升序取前 k 个邻居。第 r 条新样本以 minority[r % m] 为基点，使用该条输入的邻居名次 q（0起）和 λ 做 x+λ(z-x)。新样本不加入邻居搜索。',
+ '首行 n d k g；随后 n 行：0/1标签及 d 个实数特征；再有 g 行：q λ。5≤n≤200，1≤d≤20，1≤g≤200；两类均存在且样本数不等；少数类数 m≥2；1≤k≤m-1，0≤q<k，0≤λ≤1。特征用普通十进制写法（不使用指数），小数点后最多12位，绝对值≤1000000。',
  '只输出生成的 g 行特征，每行 d 个数，不输出原样本、行数或标签。', '少数类为1，其点按输入顺序是0、10；k=1时互为唯一邻居。第0条以0为基点，λ=0.5得5；第1条以10为基点，λ=0.25得7.5。多数类1、2、3不参与。',
- ['统计两类数目，取少数类，保留原始下标用于距离并列。', '针对每个少数类基点排序其他少数类点；不需要开平方，平方距离的顺序相同。', '预存每个基点前 k 个邻居；第 r 条使用 r % m 基点与输入 q 邻居，再做统一系数插值。'],
- '设少数类数 m，时间 O(nd + m²d + m² log m + gd)，空间 O(nd + mk + gd + m)；逐基点排序临时距离表，不保留全距离矩阵。', '多数类距离再近也不可用；排除自身而非排除所有同坐标点；并列按原始下标；k合法最小值1、m合法最小值2均覆盖。', '''def solve(raw):
+ ['统计两类数目，取少数类，保留原始下标用于距离并列。', '针对每个少数类基点排序其他少数类点；不需要开平方，平方距离的顺序相同。', '用Fraction(原始坐标文本)求精确平方距离，不能先转float；排序后预存前 k 个邻居，第 r 条按 r % m 与 q 选点，转float后插值输出。'],
+ '设少数类数 m，时间 O(nd + m²d + m² log m + gd)，空间 O(nd + mk + gd + m)；逐基点排序临时距离表，不保留全距离矩阵，按题面最多12位小数的有界有理数算术计。', '多数类距离再近也不可用；排除自身而非排除所有同坐标点；十进制等距必须精确判定，再按原始下标；Fraction必须从文本创建，不能从舍入后的float创建；不采用可能破坏排序传递性的epsilon比较。', '''from fractions import Fraction
+
+
+def solve(raw):
     lines = raw.splitlines()
     n, d, k, g = map(int, lines[0].split())
     samples = []
     for i, line in enumerate(lines[1:n+1]):
         parts = line.split()
-        samples.append((int(parts[0]), list(map(float, parts[1:])), i))
+        # 从原文本解析有理数，保留输入十进制坐标的精确距离关系。
+        samples.append((int(parts[0]), list(map(Fraction, parts[1:])), i))
     counts = [sum(label == c for label, _, _ in samples) for c in (0, 1)]
     minority_label = 0 if counts[0] < counts[1] else 1
     minority = [(x, index) for label, x, index in samples if label == minority_label]
@@ -359,8 +368,9 @@ material(30, '实现完整小型 SMOTE 的确定性教学版。少数类是原�
         q_text, lam_text = line.split()
         q, lam = int(q_text), float(lam_text)
         base = r % len(minority)
-        x = minority[base][0]
-        z = minority[neighbors[base][q]][0]
+        # 邻居已经用精确距离确定；输出插值允许题面规定的浮点误差。
+        x = list(map(float, minority[base][0]))
+        z = list(map(float, minority[neighbors[base][q]][0]))
         output.append(format_row(x[j]+lam*(z[j]-x[j]) for j in range(d)))
     return '\\n'.join(output)''', SMOTE_SOURCE)
 

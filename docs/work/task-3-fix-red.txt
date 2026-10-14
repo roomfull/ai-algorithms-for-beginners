@@ -1,0 +1,86 @@
+test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) ... 
+  test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='独立案例6') ... FAIL
+  test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='独立案例6') ... FAIL
+test_independent_contingency_is_zero (test_preprocessing_features.PreprocessingFeatureTests.test_independent_contingency_is_zero) ... ok
+test_integer_metadata_rejects_fractional_output (test_preprocessing_features.PreprocessingFeatureTests.test_integer_metadata_rejects_fractional_output) ... 
+  test_integer_metadata_rejects_fractional_output (test_preprocessing_features.PreprocessingFeatureTests.test_integer_metadata_rejects_fractional_output) (pid=28) ... FAIL
+  test_integer_metadata_rejects_fractional_output (test_preprocessing_features.PreprocessingFeatureTests.test_integer_metadata_rejects_fractional_output) (pid=37) ... FAIL
+test_mad_translation_invariant (test_preprocessing_features.PreprocessingFeatureTests.test_mad_translation_invariant) ... ok
+test_smote_decimal_distance_tie_uses_original_index (test_preprocessing_features.PreprocessingFeatureTests.test_smote_decimal_distance_tie_uses_original_index) ... FAIL
+test_smote_excludes_closer_majority_and_endpoints (test_preprocessing_features.PreprocessingFeatureTests.test_smote_excludes_closer_majority_and_endpoints) ... ok
+test_tfidf_smoothed_manual_weights_and_unit_norm (test_preprocessing_features.PreprocessingFeatureTests.test_tfidf_smoothed_manual_weights_and_unit_norm) ... ok
+test_zscore_decimal_constant_column_is_exactly_zero (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_decimal_constant_column_is_exactly_zero) ... FAIL
+test_zscore_population_invariants_and_constant_column (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_population_invariants_and_constant_column) ... ok
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='独立案例6')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 34, in test_all_hand_calculated_cases
+    self.assertTrue(math.isclose(x, y, abs_tol=1e-6, rel_tol=1e-6), (x, y))
+AssertionError: False is not true : (-1.0, 0.0)
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='独立案例6')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 34, in test_all_hand_calculated_cases
+    self.assertTrue(math.isclose(x, y, abs_tol=1e-6, rel_tol=1e-6), (x, y))
+AssertionError: False is not true : (0.2, 0.4)
+
+======================================================================
+FAIL: test_integer_metadata_rejects_fractional_output (test_preprocessing_features.PreprocessingFeatureTests.test_integer_metadata_rejects_fractional_output) (pid=28)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 62, in test_integer_metadata_rejects_fractional_output
+    self.assertFalse(checker.compare_output(actual, expected, data['mode'])[0])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_integer_metadata_rejects_fractional_output (test_preprocessing_features.PreprocessingFeatureTests.test_integer_metadata_rejects_fractional_output) (pid=37)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 62, in test_integer_metadata_rejects_fractional_output
+    self.assertFalse(checker.compare_output(actual, expected, data['mode'])[0])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_smote_decimal_distance_tie_uses_original_index (test_preprocessing_features.PreprocessingFeatureTests.test_smote_decimal_distance_tie_uses_original_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 48, in test_smote_decimal_distance_tie_uses_original_index
+    self.assertEqual(rows, [[0.4]])
+AssertionError: Lists differ: [[0.2]] != [[0.4]]
+
+First differing element 0:
+[0.2]
+[0.4]
+
+- [[0.2]]
+?     ^
+
++ [[0.4]]
+?     ^
+
+
+======================================================================
+FAIL: test_zscore_decimal_constant_column_is_exactly_zero (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_decimal_constant_column_is_exactly_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 43, in test_zscore_decimal_constant_column_is_exactly_zero
+    self.assertEqual(self.run_solution(26, '3 1\n0.1\n0.1\n0.1\n'), [[0], [0], [0]])
+AssertionError: Lists differ: [[-1.0], [-1.0], [-1.0]] != [[0], [0], [0]]
+
+First differing element 0:
+[-1.0]
+[0]
+
+- [[-1.0], [-1.0], [-1.0]]
+?   ---     ---     ---
+
++ [[0], [0], [0]]
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.350s
+
+FAILED (failures=6)
