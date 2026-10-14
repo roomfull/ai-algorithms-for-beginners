@@ -210,6 +210,28 @@ class MLNeuralTests(unittest.TestCase):
             self.assertLessEqual(current,previous+1e-10)
             previous=current
 
+    def test_kmeans_large_exact_distance_tie(self):
+        # 两个距离平方均为2*99.9²=19960.02，应选择小索引。
+        body='0.1 0.1\n100 100\n-99.8 -99.8\n'
+        with self.subTest(pid=42):
+            self.assertEqual(self.run_solution(42, '1 2 2\n'+body, ['int']), [[0]])
+        with self.subTest(pid=44):
+            self.assertEqual(self.run_solution(44, '1 2 2 1 0\n'+body, ['float', 'float', 'int']), [[0.1,0.1],[-99.8,-99.8],[0]])
+
+    def test_kmeans_exact_tolerance_boundary(self):
+        # 低索引中心比最小距离分别多10^-12、4*10^-12；前者含边界平票。
+        for center, label in (('0.000001', 0), ('0.000002', 1)):
+            with self.subTest(center=center):
+                body=f'0\n{center}\n0\n'
+                self.assertEqual(self.run_solution(42, '1 1 2\n'+body, ['int']), [[label]])
+                wanted=[[0],[0],[0]] if label == 0 else [[0.000002],[0],[1]]
+                self.assertEqual(self.run_solution(44, '1 1 2 1 0\n'+body, ['float','float','int']), wanted)
+
+    def test_kmeans_exact_center_update_and_stopping_boundary(self):
+        # 首轮中心0.1、0.6，最大变化恰好0.3，因此停止；多走一轮会变成0.2、0.75。
+        raw='4 1 2 10 0.3\n0.1\n0.3\n0.4\n1.1\n0.1\n0.3\n'
+        self.assertEqual(self.run_solution(44, raw, ['float','float','int']), [[0.1],[0.6],[0,0,1,1]])
+
 
 if __name__=='__main__':
     unittest.main()

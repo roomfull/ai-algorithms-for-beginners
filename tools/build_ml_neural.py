@@ -391,8 +391,10 @@ for pid in (45,49,50):
 SCAFFOLDS[45] = SCAFFOLDS[45].replace('bias = float(lines[n+2])', 'bias = Fraction(lines[n+2])')
 
 
-def write_materials():
+def write_materials(ids=None):
     for pid, t in TOPICS.items():
+        if ids is not None and pid not in ids:
+            continue
         ident = f'P{pid:03}'
         folder = ROOT / 'chapters' / chapter(pid) / 'problems' / ident
         folder.mkdir(parents=True, exist_ok=True)
@@ -464,7 +466,7 @@ def write_materials():
             readme=readme.replace(f'[下一题](../P{pid+1:03}/README.md)', '[后续学习路线](../../../../README.md)')
         (folder/'README.md').write_text(readme, encoding='utf-8')
         scaffold=t['scaffold'] or SCAFFOLDS[pid]
-        fraction_import = 'from fractions import Fraction\n' if pid in (45,49,50) else ''
+        fraction_import = 'from fractions import Fraction\n' if pid in (42,44,45,49,50) else ''
         exercise=f'''"""{ident}：练习脚手架，保持独立；不要导入solutions。"""
 import sys
 import math
@@ -500,6 +502,31 @@ if __name__ == '__main__':
 '''
         (ROOT/'solutions'/f'{ident}.md').write_text(solution_md,encoding='utf-8')
 
+
+
+# 保留原有min+1e-12契约，按输入十进制的精确距离定义容差。
+TOPICS[42]['task'] = TOPICS[42]['task'].replace('这个绝对容差明确处理浮点并列。', '距离与1e-12均按精确数值比较；这是近距离平票规则，也包含严格等距。')
+TOPICS[42]['hints'][0] = '用Fraction(原始字符串)读样本和中心，每个点分别到所有中心算精确平方距离。'
+TOPICS[42]['hints'][2] = 'min_dist=min(distances)，用next找第一个dist≤min_dist+Fraction("1e-12")的索引；不要先转float，也不能改成只判断严格相等。'
+TOPICS[42]['pitfalls'] = '高距离下float误差也会破坏等距；Fraction从文本创建。与最小值差恰好1e-12仍属平票，超过才排除；不要更新中心。'
+TOPICS[44]['inputs'] = TOPICS[44]['inputs'].replace('tol有限实数。', 'tol用普通十进制写法（不使用指数），小数点后最多12位。')
+TOPICS[44]['hints'][0] = '用Fraction读样本、中心与tol；从原字符串构造，不能经过float。'
+TOPICS[44]['hints'][2] = '每轮以精确平方距离按min+Fraction("1e-12")分配，用Fraction求新中心和最大坐标变化，再与精确tol判停；循环后按最终精确中心再分配，仅打印中心时转float。'
+TOPICS[44]['pitfalls'] += ' 中心均值可能不是有限小数，保留Fraction；不能先舍入中心再比较容差或判停。'
+for pid in (42,44):
+    TOPICS[pid]['complexity'] += ' 以上计有理数运算次数；若中间分子/分母最多B位，存储位成本还需乘B，单次算术含大整数运算与最大公约数约分成本。坐标最多6位小数、簇大小≤100，中心每轮直接取原样本均值，位数不随轮数无限累积。'
+    SCAFFOLDS[pid] = SCAFFOLDS[pid].replace('map(float,', 'map(Fraction,').replace('tol = float(head[4])', 'tol = Fraction(head[4])')
+    SCAFFOLDS[pid] += '\n# 平票阈值使用Fraction("1e-12")，不要使用浮点1e-12。'
+SCAFFOLDS[44] += '\n# tol最多12位小数；中心更新和判停保持Fraction，最后打印才转float。'
+TOPICS[42]['cases'] += [
+ case('大距离精确等距', '1 2 2\n0.1 0.1\n100 100\n-99.8 -99.8', '0'),
+ case('容差含边界', '1 1 2\n0\n0.000001\n0', '0'),
+ case('容差边界外', '1 1 2\n0\n0.000002\n0', '1')]
+TOPICS[44]['cases'] += [
+ case('大距离精确等距更新', '1 2 2 1 0\n0.1 0.1\n100 100\n-99.8 -99.8', '0.1 0.1\n-99.8 -99.8\n0'),
+ case('容差含边界更新', '1 1 2 1 0\n0\n0.000001\n0', '0\n0\n0'),
+ case('容差边界外更新', '1 1 2 1 0\n0\n0.000002\n0', '0.000002\n0\n1'),
+ case('精确中心与判停边界', '4 1 2 10 0.3\n0.1\n0.3\n0.4\n1.1\n0.1\n0.3', '0.1\n0.6\n0 0 1 1')]
 
 if __name__ == '__main__':
     write_materials()

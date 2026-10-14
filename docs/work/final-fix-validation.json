@@ -1,0 +1,14 @@
+[
+  {
+    "name": "solutions",
+    "command": ".\\.venv\\Scripts\\python.exe check.py --all --solution",
+    "exit_code": 0,
+    "elapsed_seconds": 30.081
+  },
+  {
+    "name": "unittest",
+    "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "elapsed_seconds": 25.352
+  }
+]

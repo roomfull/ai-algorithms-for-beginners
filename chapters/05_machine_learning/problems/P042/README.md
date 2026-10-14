@@ -1,6 +1,6 @@
 # P042 K-means 分配样本
 
-聚类没有已知类别标签；这里只给定c个中心，把每个点分配给距离平方最小的中心。先求最小距离m，再从小索引到大选第一个distance≤m+1e-12的中心。这个绝对容差明确处理浮点并列。
+聚类没有已知类别标签；这里只给定c个中心，把每个点分配给距离平方最小的中心。先求最小距离m，再从小索引到大选第一个distance≤m+1e-12的中心。距离与1e-12均按精确数值比较；这是近距离平票规则，也包含严格等距。
 
 ## 输入与约束
 
@@ -32,7 +32,7 @@
 
 <details><summary>提示 1</summary>
 
-每个点分别到所有中心算距离。
+用Fraction(原始字符串)读样本和中心，每个点分别到所有中心算精确平方距离。
 
 </details>
 
@@ -44,7 +44,7 @@
 
 <details><summary>提示 3</summary>
 
-min_dist=min(distances)，用next找第一个dist≤min_dist+1e-12的索引。
+min_dist=min(distances)，用next找第一个dist≤min_dist+Fraction("1e-12")的索引；不要先转float，也不能改成只判断严格相等。
 
 </details>
 

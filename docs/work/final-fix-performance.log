@@ -1,0 +1,2 @@
+P044 deterministic max dimensions solve n=100,d=10,c=10,max_iter=100: exit=0, 0.128904s
+10 maximum-size assignment passes: 0.197215s; linear estimate for 101 passes (not full worst-case proof): 1.991866s

@@ -115,8 +115,10 @@ add(38, '中位数与 MAD 鲁棒特征', [
 def path(pid):
     return ROOT / 'chapters' / (PRE if pid <= 30 else FEAT) / 'problems' / f'P{pid:03}'
 
-def write_cases():
+def write_cases(ids=None):
     for pid, data in DATA.items():
+        if ids is not None and pid not in ids:
+            continue
         folder = path(pid)
         folder.mkdir(parents=True, exist_ok=True)
         cases = [dict(name=f'独立案例{i+1}', input=stdin, expected=expected)
@@ -133,7 +135,7 @@ SMOTE_SOURCE = 'https://imbalanced-learn.org/stable/over_sampling.html#sample-ge
 def material(pid, rule, input_spec, output_spec, hand, hints, complexity, pitfalls, code, source=PRE_SOURCE):
     MATERIAL[pid] = locals()
 
-def write_materials(ids):
+def write_materials(ids, checkpoint=True):
     for pid in ids:
         m = MATERIAL[pid]
         data = DATA[pid]
@@ -204,8 +206,12 @@ if __name__ == '__main__':
     answer = solve(sys.stdin.read())
     print(answer)
 '''
+        if pid in (25, 26, 27, 38):
+            exercise = exercise.replace('import sys\n', 'import sys\nfrom fractions import Fraction\n')
         folder.joinpath('exercise.py').write_text(exercise, encoding='utf-8')
         code = '"""'+ name + '：独立参考解。"""\nimport sys\nimport math\n\n\ndef format_row(values):\n    return " ".join(format(v, ".12g") for v in values)\n\n\n# 算法关键：' + m['hints'][2] + '\n' + m['code'].strip() + '\n\n\nif __name__ == "__main__":\n    print(solve(sys.stdin.read()))\n'
+        if pid in (25, 26, 27, 38):
+            code = code.replace('format(v,', 'format(float(v),')
         ROOT.joinpath('solutions', name+'.py').write_text(code, encoding='utf-8')
         ROOT.joinpath('solutions', name+'.md').write_text(f'''# {name} {data['title']}题解
 
@@ -223,6 +229,8 @@ if __name__ == '__main__':
 
 来源：[定义核对的一手资料]({m['source']})。本题为原创教学练习；来源用于定义与实现思路核对，参考代码独立编写。
 ''', encoding='utf-8')
+    if not checkpoint:
+        return
     ROOT.joinpath('docs/work/task-3-checkpoint.md').write_text(
         '# Task 3 恢复检查点\n\nRED 已重跑并保存 task-3-red.txt（6 tests，85 failures，缺少参考解）。\n\n'
         + '已落盘材料：' + ', '.join(f'P{p:03}' for p in sorted(MATERIAL) if ROOT.joinpath('solutions', f'P{p:03}.py').exists())
@@ -532,6 +540,55 @@ def solve(raw):
     mad = median([abs(x-center) for x in values])
     features = [0.0 if mad == 0 else (x-center)/mad for x in values]
     return format_row([center, mad])+'\\n'+format_row(features)''', MAD_SOURCE)
+
+
+# 最终数值修复：只调整这四题；案例由等间距/训练范围/MAD定义独立手算。
+DATA[25]['pairs'] += [
+ ('3 1\n999999.999992\n999999.999993\n999999.999994\n', '0\n0.5\n1\n'),
+ ('3 2\n0 999999.999999\n0.000000000001 999999.999999\n0.000000000002 999999.999999\n', '0 0\n0.5 0\n1 0\n')]
+DATA[26]['pairs'] += [
+ ('3 1\n999999.999998\n999999.999999\n1000000\n', f'{-math.sqrt(1.5)}\n0\n{math.sqrt(1.5)}\n'),
+ ('3 1\n0\n0.000000000001\n0.000000000002\n', f'{-math.sqrt(1.5)}\n0\n{math.sqrt(1.5)}\n'),
+ ('3 1\n999999.999999\n999999.999999\n999999.999999\n', '0\n0\n0\n')]
+DATA[27]['pairs'] += [
+ ('3 1 2\n999999.999992\n999999.999994\n999999.999993\n0 1 2\n', '0\n1\n0.5\n'),
+ ('3 1 2\n0\n0.000000000001\n1\n0 1 2\n', '0\n1\n1000000000000\n')]
+DATA[38]['pairs'] += [
+ ('999999.999992 999999.999993 999999.999994\n', '999999.999993 0.000001\n-1 0 1\n'),
+ ('0 0.000000000001 0.000000000002\n', '0.000000000001 0.000000000001\n-1 0 1\n')]
+
+for pid in (25, 26, 27, 38):
+    m = MATERIAL[pid]
+    m['input_spec'] += ' 数值使用普通十进制写法（不使用指数），小数点后最多12位。'
+    m['hints'][0] = '先用Fraction(原始数值字符串)保存十进制精度，不能先转float。' + m['hints'][0]
+    m['hints'][2] = '减法、统计量及除法均保留Fraction，只在最终输出时转float。' + m['hints'][2]
+    m['pitfalls'] += ' 大偏移下的微小差值会放大float输入舍入误差；Fraction必须直接从字符串创建。'
+    m['complexity'] += ' 这里计有理数运算次数；每个分子/分母占B位时，空间还需乘B，每次精确运算含大整数运算与最大公约数约分成本，并非任意精度O(1)。本题限制12位小数、数值范围与n，使B有界。'
+    m['code'] = 'from fractions import Fraction\n\n\n' + m['code'].replace('map(float,', 'map(Fraction,')
+
+MATERIAL[26]['hints'][1] = '用精确均值和平方偏差求总体方差v；v=0输出0。'
+MATERIAL[26]['hints'][2] = '以Fraction求均值μ和总体方差v；v=0直接输出0；否则令delta=x-μ，先精确算delta²/v，再取平方根并恢复delta的正负号。仅在开平方与输出时转float。'
+MATERIAL[26]['pitfalls'] = '分母用n而非n-1；输入小差值不能先转float。不要先把极小方差转float再开根；用有界的无量纲比值delta²/v。精确方差为0即可识别常量列。标准化不会自动使分布成为正态分布。'
+MATERIAL[26]['code'] = '''from fractions import Fraction
+
+
+def zscore(delta, variance):
+    if variance == 0:
+        return 0.0
+    # 先精确相除，再开平方：0 <= delta²/variance <= n。
+    # 不把很小的原始方差先转float，避免尺度导致的下溢。
+    magnitude = math.sqrt(float(delta * delta / variance))
+    return -magnitude if delta < 0 else magnitude
+
+
+def solve(raw):
+    lines = raw.splitlines()
+    n, d = map(int, lines[0].split())
+    rows = [list(map(Fraction, line.split())) for line in lines[1:n+1]]
+    means = [sum(row[j] for row in rows)/n for j in range(d)]
+    variances = [sum((row[j]-means[j])**2 for row in rows)/n for j in range(d)]
+    return '\\n'.join(format_row(zscore(row[j]-means[j], variances[j])
+                                for j in range(d)) for row in rows)'''
 
 if __name__ == '__main__':
     import argparse

@@ -1,0 +1,14 @@
+test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) ... ok
+test_zscore_large_offset_and_small_scale (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_large_offset_and_small_scale) ... ok
+test_mad_preserves_decimal_gaps (test_preprocessing_features.PreprocessingFeatureTests.test_mad_preserves_decimal_gaps) ... ok
+test_small_scale_training_range_and_constant_columns (test_preprocessing_features.PreprocessingFeatureTests.test_small_scale_training_range_and_constant_columns) ... ok
+test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) ... ok
+test_kmeans_exact_tolerance_boundary (test_ml_neural.MLNeuralTests.test_kmeans_exact_tolerance_boundary) ... ok
+test_kmeans_exact_center_update_and_stopping_boundary (test_ml_neural.MLNeuralTests.test_kmeans_exact_center_update_and_stopping_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.236s
+
+OK
+
+EXIT_CODE=0

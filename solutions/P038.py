@@ -4,10 +4,13 @@ import math
 
 
 def format_row(values):
-    return " ".join(format(v, ".12g") for v in values)
+    return " ".join(format(float(v), ".12g") for v in values)
 
 
-# 算法关键：先求M，再求abs(x-M)的中位数；MAD>0时逐项除MAD，否则造全0；不能用偏差的平均数代替中位数。
+# 算法关键：减法、统计量及除法均保留Fraction，只在最终输出时转float。先求M，再求abs(x-M)的中位数；MAD>0时逐项除MAD，否则造全0；不能用偏差的平均数代替中位数。
+from fractions import Fraction
+
+
 def median(values):
     ordered = sorted(values)
     n = len(ordered)
@@ -17,7 +20,7 @@ def median(values):
 
 
 def solve(raw):
-    values = list(map(float, raw.split()))
+    values = list(map(Fraction, raw.split()))
     center = median(values)
     mad = median([abs(x-center) for x in values])
     features = [0.0 if mad == 0 else (x-center)/mad for x in values]

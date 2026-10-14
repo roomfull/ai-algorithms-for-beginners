@@ -1,0 +1,105 @@
+test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) ... 
+  test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) (pid=25) ... FAIL
+  test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) (pid=27) ... FAIL
+test_zscore_large_offset_and_small_scale (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_large_offset_and_small_scale) ... 
+  test_zscore_large_offset_and_small_scale (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_large_offset_and_small_scale) (values='999999.999998\n999999.999999\n1000000') ... FAIL
+test_mad_preserves_decimal_gaps (test_preprocessing_features.PreprocessingFeatureTests.test_mad_preserves_decimal_gaps) ... 
+  test_mad_preserves_decimal_gaps (test_preprocessing_features.PreprocessingFeatureTests.test_mad_preserves_decimal_gaps) (raw='999999.999992 999999.999993 999999.999994\n') ... FAIL
+test_small_scale_training_range_and_constant_columns (test_preprocessing_features.PreprocessingFeatureTests.test_small_scale_training_range_and_constant_columns) ... ok
+test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) ... 
+  test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) (pid=42) ... FAIL
+  test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) (pid=44) ... FAIL
+test_kmeans_exact_tolerance_boundary (test_ml_neural.MLNeuralTests.test_kmeans_exact_tolerance_boundary) ... ok
+test_kmeans_exact_center_update_and_stopping_boundary (test_ml_neural.MLNeuralTests.test_kmeans_exact_center_update_and_stopping_boundary) ... ok
+
+======================================================================
+FAIL: test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) (pid=25)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 50, in test_scaling_preserves_decimal_gaps_at_large_offset
+    self.assertEqual(self.run_solution(pid, raw), expected)
+AssertionError: Lists differ: [[0.0], [0.499970894697], [1.0]] != [[0], [0.5], [1]]
+
+First differing element 1:
+[0.499970894697]
+[0.5]
+
+- [[0.0], [0.499970894697], [1.0]]
++ [[0], [0.5], [1]]
+
+======================================================================
+FAIL: test_scaling_preserves_decimal_gaps_at_large_offset (test_preprocessing_features.PreprocessingFeatureTests.test_scaling_preserves_decimal_gaps_at_large_offset) (pid=27)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 50, in test_scaling_preserves_decimal_gaps_at_large_offset
+    self.assertEqual(self.run_solution(pid, raw), expected)
+AssertionError: Lists differ: [[0.0], [1.0], [0.499970894697]] != [[0], [1], [0.5]]
+
+First differing element 2:
+[0.499970894697]
+[0.5]
+
+- [[0.0], [1.0], [0.499970894697]]
++ [[0], [1], [0.5]]
+
+======================================================================
+FAIL: test_zscore_large_offset_and_small_scale (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_large_offset_and_small_scale) (values='999999.999998\n999999.999999\n1000000')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 59, in test_zscore_large_offset_and_small_scale
+    self.assertAlmostEqual(row[0], expected, places=10)
+AssertionError: -1.22488743692 != -1.224744871391589 within 10 places (0.00014256552841107606 difference)
+
+======================================================================
+FAIL: test_mad_preserves_decimal_gaps (test_preprocessing_features.PreprocessingFeatureTests.test_mad_preserves_decimal_gaps) (raw='999999.999992 999999.999993 999999.999994\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_preprocessing_features.py", line 66, in test_mad_preserves_decimal_gaps
+    self.assertEqual(self.run_solution(38, raw)[1], [-1, 0, 1])
+AssertionError: Lists differ: [-1.0, 0.0, 1.00011642799] != [-1, 0, 1]
+
+First differing element 2:
+1.00011642799
+1
+
+- [-1.0, 0.0, 1.00011642799]
++ [-1, 0, 1]
+
+======================================================================
+FAIL: test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) (pid=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 217, in test_kmeans_large_exact_distance_tie
+    self.assertEqual(self.run_solution(42, '1 2 2\n'+body, ['int']), [[0]])
+AssertionError: Lists differ: [[1.0]] != [[0]]
+
+First differing element 0:
+[1.0]
+[0]
+
+- [[1.0]]
+?   --
+
++ [[0]]
+
+======================================================================
+FAIL: test_kmeans_large_exact_distance_tie (test_ml_neural.MLNeuralTests.test_kmeans_large_exact_distance_tie) (pid=44)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 219, in test_kmeans_large_exact_distance_tie
+    self.assertEqual(self.run_solution(44, '1 2 2 1 0\n'+body, ['float', 'float', 'int']), [[0.1,0.1],[-99.8,-99.8],[0]])
+AssertionError: Lists differ: [[100.0, 100.0], [0.1, 0.1], [1.0]] != [[0.1, 0.1], [-99.8, -99.8], [0]]
+
+First differing element 0:
+[100.0, 100.0]
+[0.1, 0.1]
+
+- [[100.0, 100.0], [0.1, 0.1], [1.0]]
++ [[0.1, 0.1], [-99.8, -99.8], [0]]
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.773s
+
+FAILED (failures=6)
+
+EXIT_CODE=1

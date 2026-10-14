@@ -4,7 +4,7 @@
 
 ## 输入与约束
 
-第一行 n d c max_iter tol；随后n行样本、c行初始中心。n,d,c和数值范围同P042，1≤max_iter≤100，0≤tol≤1；tol有限实数。 所有尺寸和标签均严格输入整数；不要求处理无效输入。
+第一行 n d c max_iter tol；随后n行样本、c行初始中心。n,d,c和数值范围同P042，1≤max_iter≤100，0≤tol≤1；tol用普通十进制写法（不使用指数），小数点后最多12位。 所有尺寸和标签均严格输入整数；不要求处理无效输入。
 
 ## 输出
 
@@ -35,7 +35,7 @@
 
 <details><summary>提示 1</summary>
 
-组合分配函数与更新函数。
+用Fraction读样本、中心与tol；从原字符串构造，不能经过float。
 
 </details>
 
@@ -47,7 +47,7 @@
 
 <details><summary>提示 3</summary>
 
-每轮assign→update→判停，循环后再assign最终中心；不要输出上一轮旧中心对应的标签。
+每轮以精确平方距离按min+Fraction("1e-12")分配，用Fraction求新中心和最大坐标变化，再与精确tol判停；循环后按最终精确中心再分配，仅打印中心时转float。
 
 </details>
 

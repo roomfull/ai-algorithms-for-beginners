@@ -42,6 +42,34 @@ class PreprocessingFeatureTests(unittest.TestCase):
     def test_zscore_decimal_constant_column_is_exactly_zero(self):
         self.assertEqual(self.run_solution(26, '3 1\n0.1\n0.1\n0.1\n'), [[0], [0], [0]])
 
+    def test_scaling_preserves_decimal_gaps_at_large_offset(self):
+        for pid, raw in ((25, '3 1\n999999.999992\n999999.999993\n999999.999994\n'),
+                         (27, '3 1 2\n999999.999992\n999999.999994\n999999.999993\n0 1 2\n')):
+            with self.subTest(pid=pid):
+                expected = [[0], [0.5], [1]] if pid == 25 else [[0], [1], [0.5]]
+                self.assertEqual(self.run_solution(pid, raw), expected)
+
+    def test_zscore_large_offset_and_small_scale(self):
+        # 三个等间距数的总体方差是2h²/3，标准化与偏移和h无关。
+        for values in ('999999.999998\n999999.999999\n1000000',
+                       '0\n0.000000000001\n0.000000000002'):
+            with self.subTest(values=values):
+                rows = self.run_solution(26, '3 1\n'+values+'\n')
+                for row, expected in zip(rows, (-math.sqrt(1.5), 0, math.sqrt(1.5))):
+                    self.assertAlmostEqual(row[0], expected, places=10)
+        self.assertEqual(self.run_solution(26, '3 1\n999999.999999\n999999.999999\n999999.999999\n'), [[0], [0], [0]])
+
+    def test_mad_preserves_decimal_gaps(self):
+        for raw in ('999999.999992 999999.999993 999999.999994\n',
+                    '0 0.000000000001 0.000000000002\n'):
+            with self.subTest(raw=raw):
+                self.assertEqual(self.run_solution(38, raw)[1], [-1, 0, 1])
+
+    def test_small_scale_training_range_and_constant_columns(self):
+        self.assertEqual(self.run_solution(25, '3 2\n0 999999.999999\n0.000000000001 999999.999999\n0.000000000002 999999.999999\n'), [[0, 0], [0.5, 0], [1, 0]])
+        # 训练宽度10^-12，验证值1得到10^12；不能裁剪或提前转float。
+        self.assertEqual(self.run_solution(27, '3 1 2\n0\n0.000000000001\n1\n0 1 2\n'), [[0], [1], [1e12]])
+
     def test_smote_decimal_distance_tie_uses_original_index(self):
         # 两邻点离0.3的十进制距离都是0.1，输入下标1的0.4先于下标2的0.2。
         rows = self.run_solution(30, '7 1 1 1\n1 0.3\n1 0.4\n1 0.2\n0 1\n0 2\n0 3\n0 4\n0 1\n')

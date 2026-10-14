@@ -54,6 +54,46 @@
         "float",
         "int"
       ]
+    },
+    {
+      "name": "大距离精确等距更新",
+      "input": "1 2 2 1 0\n0.1 0.1\n100 100\n-99.8 -99.8\n",
+      "expected": "0.1 0.1\n-99.8 -99.8\n0\n",
+      "line_modes": [
+        "float",
+        "float",
+        "int"
+      ]
+    },
+    {
+      "name": "容差含边界更新",
+      "input": "1 1 2 1 0\n0\n0.000001\n0\n",
+      "expected": "0\n0\n0\n",
+      "line_modes": [
+        "float",
+        "float",
+        "int"
+      ]
+    },
+    {
+      "name": "容差边界外更新",
+      "input": "1 1 2 1 0\n0\n0.000002\n0\n",
+      "expected": "0.000002\n0\n1\n",
+      "line_modes": [
+        "float",
+        "float",
+        "int"
+      ]
+    },
+    {
+      "name": "精确中心与判停边界",
+      "input": "4 1 2 10 0.3\n0.1\n0.3\n0.4\n1.1\n0.1\n0.3\n",
+      "expected": "0.1\n0.6\n0 0 1 1\n",
+      "line_modes": [
+        "float",
+        "float",
+        "int"
+      ]
     }
   ]
 }
