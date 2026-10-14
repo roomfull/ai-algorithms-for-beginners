@@ -35,6 +35,7 @@
 ```
 
 - `mode` 仅 `text`、`int`、`float`；`requires` 为 `[]` 或 `["numpy"]`；案例必须至少 5 个，`name` 唯一。可选 `timeout` 单位秒，默认 5 秒。
+- 混合输出题可在每个case提供 `line_modes`（按输出行列出的text/int/float列表）；长度必须等于expected规范化后的行数。全局mode作为缺省，line_modes存在时逐行覆盖。数值行仍先查全部形状再比数值，整数标签须严格验证。
 - 比较 text 时允许 CRLF/LF 差异、行尾空白、末尾空行差异，但保留行内内容；int/float 先验证行数、每行元素数，再逐项比较。整数严格以十进制整数解析；浮点 abs_tol=rel_tol=1e-6，非有限数拒绝。
 - 每题全部标准输入输出，无提示性 stdout。初期 exercise 提供详细脚手架；未完成处 `raise NotImplementedError("请按题目提示完成这里")`。第一章避免提前使用函数、推导式等尚未讲授语法。
 - README 包含完整样例输入/输出（与 cases 第一个案例一致）、手算步骤、分级提示（可折叠）、运行与检查命令、下一题或章节入口。

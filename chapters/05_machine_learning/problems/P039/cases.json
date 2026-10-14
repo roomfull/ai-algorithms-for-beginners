@@ -1,0 +1,34 @@
+{
+  "id": "P039",
+  "chapter": "05",
+  "title": "KNN 近邻排序",
+  "mode": "int",
+  "requires": [],
+  "cases": [
+    {
+      "name": "等距离按下标",
+      "input": "3 2 2\n1 0\n-1 0\n0 2\n0 0\n",
+      "expected": "0 1\n"
+    },
+    {
+      "name": "单点",
+      "input": "1 1 1\n7\n2\n",
+      "expected": "0\n"
+    },
+    {
+      "name": "重复点",
+      "input": "3 1 3\n2\n2\n0\n2\n",
+      "expected": "0 1 2\n"
+    },
+    {
+      "name": "负坐标",
+      "input": "3 1 2\n-4\n-1\n3\n-2\n",
+      "expected": "1 0\n"
+    },
+    {
+      "name": "多维距离",
+      "input": "3 3 1\n1 2 3\n0 0 0\n1 1 1\n1 1 2\n",
+      "expected": "2\n"
+    }
+  ]
+}

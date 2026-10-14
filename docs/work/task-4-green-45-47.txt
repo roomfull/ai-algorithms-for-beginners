@@ -1,0 +1,9 @@
+test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) ... ok
+test_kmeans_sse_nonincreasing_and_empty_cluster (tests.test_ml_neural.MLNeuralTests.test_kmeans_sse_nonincreasing_and_empty_cluster) ... ok
+test_knn_distance_and_vote_ties_are_distinct (tests.test_ml_neural.MLNeuralTests.test_knn_distance_and_vote_ties_are_distinct) ... ok
+test_logistic_gradient_matches_finite_difference (tests.test_ml_neural.MLNeuralTests.test_logistic_gradient_matches_finite_difference) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.348s
+
+OK

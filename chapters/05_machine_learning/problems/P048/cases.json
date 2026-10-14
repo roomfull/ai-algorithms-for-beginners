@@ -1,0 +1,34 @@
+{
+  "id": "P048",
+  "chapter": "05",
+  "title": "熵与 Gini 不纯度",
+  "mode": "float",
+  "requires": [],
+  "cases": [
+    {
+      "name": "二类均衡",
+      "input": "0 0 1 1\n",
+      "expected": "1 0.5\n"
+    },
+    {
+      "name": "纯类",
+      "input": "7 7 7\n",
+      "expected": "0 0\n"
+    },
+    {
+      "name": "单样本",
+      "input": "-3\n",
+      "expected": "0 0\n"
+    },
+    {
+      "name": "三类均衡",
+      "input": "0 1 2\n",
+      "expected": "1.58496250072 0.666666666667\n"
+    },
+    {
+      "name": "不均衡",
+      "input": "0 0 0 1\n",
+      "expected": "0.811278124459 0.375\n"
+    }
+  ]
+}

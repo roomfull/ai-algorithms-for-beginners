@@ -7,3 +7,7 @@ review_preprocessing，base 8a73936 / head 415cd0a：Spec / Quality 需修复。
 3. P028/P037 cases.json:5：应为int却是float，误接受非整数输出；同步生成器。
 
 其余16题材料完整、案例独立、生成器一致。只定向复现问题，未重复运行已报告全套测试。完整修复和复审后才能完成本工作包。
+
+## 修复轮1复审
+
+415cd0a..aa3a274：全部3项已解决，无新问题。P026显式常量检测；P030原文本Fraction精确距离；P028/P037整数模式。review_preprocessing只运行3项新增回归均通过，并确认生成器一致。Spec/Quality通过。

@@ -1,0 +1,200 @@
+test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) ... 
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='零正负分数') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='纯偏置') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='二维内积') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='大负分数稳定') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='大正分数稳定') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='手算零权重') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='单正例') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='非零logit') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='二维梯度') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='极端错误预测') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='一轮完整更新') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='零轮') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='两轮偏置训练') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='平衡零梯度') ... FAIL
+  test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='二维一轮') ... FAIL
+test_kmeans_sse_nonincreasing_and_empty_cluster (tests.test_ml_neural.MLNeuralTests.test_kmeans_sse_nonincreasing_and_empty_cluster) ... ok
+test_knn_distance_and_vote_ties_are_distinct (tests.test_ml_neural.MLNeuralTests.test_knn_distance_and_vote_ties_are_distinct) ... ok
+test_logistic_gradient_matches_finite_difference (tests.test_ml_neural.MLNeuralTests.test_logistic_gradient_matches_finite_difference) ... FAIL
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='零正负分数')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P045
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='纯偏置')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P045
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='二维内积')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P045
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='大负分数稳定')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P045
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=45, case='大正分数稳定')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P045
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='手算零权重')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='单正例')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='非零logit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='二维梯度')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=46, case='极端错误预测')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='一轮完整更新')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P047
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='零轮')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P047
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='两轮偏置训练')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P047
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='平衡零梯度')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P047
+
+======================================================================
+FAIL: test_all_independently_derived_cases (tests.test_ml_neural.MLNeuralTests.test_all_independently_derived_cases) (pid=47, case='二维一轮')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 31, in test_all_independently_derived_cases
+    actual=self.run_solution(pid,c['input'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P047
+
+======================================================================
+FAIL: test_logistic_gradient_matches_finite_difference (tests.test_ml_neural.MLNeuralTests.test_logistic_gradient_matches_finite_difference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 52, in test_logistic_gradient_matches_finite_difference
+    output=self.run_solution(46,'3 2\n0 1 -2\n1 3 0.5\n1 -1 2\n0.2 -0.4\n0.3\n')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\tests\test_ml_neural.py", line 15, in run_solution
+    self.assertTrue(path.is_file(), f'缺少参考实现 P{pid:03}')
+AssertionError: False is not true : 缺少参考实现 P046
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.799s
+
+FAILED (failures=16)

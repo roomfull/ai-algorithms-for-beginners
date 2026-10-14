@@ -1,0 +1,34 @@
+{
+  "id": "P041",
+  "chapter": "05",
+  "title": "多查询 KNN 分类",
+  "mode": "int",
+  "requires": [],
+  "cases": [
+    {
+      "name": "三个查询含距离平局",
+      "input": "2 1 1 3\n2 0\n5 10\n1\n9\n5\n",
+      "expected": "2\n5\n2\n"
+    },
+    {
+      "name": "所有点投票",
+      "input": "2 1 2 2\n9 0\n2 10\n0\n10\n",
+      "expected": "2\n2\n"
+    },
+    {
+      "name": "单训练点",
+      "input": "1 2 1 2\n-1 0 0\n3 4\n-3 -4\n",
+      "expected": "-1\n-1\n"
+    },
+    {
+      "name": "重复坐标先下标",
+      "input": "2 1 1 2\n3 7\n1 7\n7\n8\n",
+      "expected": "3\n3\n"
+    },
+    {
+      "name": "多维",
+      "input": "3 2 1 2\n0 0 0\n1 10 0\n2 0 10\n9 1\n1 9\n",
+      "expected": "1\n2\n"
+    }
+  ]
+}
