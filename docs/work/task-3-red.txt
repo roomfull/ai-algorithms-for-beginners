@@ -1,0 +1,940 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P023', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P023
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P023', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P023
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P023', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P023
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P023', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P023
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P023', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P023
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P024', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P024
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P024', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P024
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P024', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P024
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P024', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P024
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P024', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P024
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P025', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P025
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P025', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P025
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P025', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P025
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P025', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P025
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P025', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P025
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P026', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P027', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P027
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P027', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P027
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P027', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P027
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P027', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P027
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P027', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P027
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P028', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P028
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P028', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P028
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P028', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P028
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P028', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P028
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P028', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P028
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P029', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P029
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P029', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P029
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P029', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P029
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P029', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P029
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P029', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P029
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P030', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P031', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P031
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P031', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P031
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P031', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P031
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P031', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P031
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P031', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P031
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P032', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P032
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P032', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P032
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P032', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P032
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P032', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P032
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P032', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P032
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P033', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P033', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P033', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P033', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P033', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P034', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P034
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P034', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P034
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P034', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P034
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P034', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P034
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P034', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P034
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P035', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P035
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P035', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P035
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P035', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P035
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P035', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P035
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P035', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P035
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P036', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P036', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P036', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P036', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P036', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P037', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P037
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P037', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P037
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P037', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P037
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P037', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P037
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P037', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P037
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P038', case='��������1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P038', case='��������2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P038', case='��������3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P038', case='��������4')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) (pid='P038', case='��������5')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 28, in test_all_hand_calculated_cases
+    actual = self.run_solution(int(data['id'][1:]), case['input'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_independent_contingency_is_zero (test_preprocessing_features.PreprocessingFeatureTests.test_independent_contingency_is_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 54, in test_independent_contingency_is_zero
+    self.assertEqual(self.run_solution(36, '4 6\n10 15\n'), [[0]])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P036
+
+======================================================================
+FAIL: test_mad_translation_invariant (test_preprocessing_features.PreprocessingFeatureTests.test_mad_translation_invariant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 57, in test_mad_translation_invariant
+    first = self.run_solution(38, '-4 0 2 8 10\n')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P038
+
+======================================================================
+FAIL: test_smote_excludes_closer_majority_and_endpoints (test_preprocessing_features.PreprocessingFeatureTests.test_smote_excludes_closer_majority_and_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 42, in test_smote_excludes_closer_majority_and_endpoints
+    rows = self.run_solution(30, '5 1 1 2\n1 0\n0 0.01\n1 10\n0 0.02\n0 0.03\n0 0\n0 1\n')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P030
+
+======================================================================
+FAIL: test_tfidf_smoothed_manual_weights_and_unit_norm (test_preprocessing_features.PreprocessingFeatureTests.test_tfidf_smoothed_manual_weights_and_unit_norm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 46, in test_tfidf_smoothed_manual_weights_and_unit_norm
+    rows = self.run_solution(33, '2 2 1\nb a\na a b\na\n')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P033
+
+======================================================================
+FAIL: test_zscore_population_invariants_and_constant_column (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_population_invariants_and_constant_column)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 36, in test_zscore_population_invariants_and_constant_column
+    rows = self.run_solution(26, '4 2\n2 9\n4 9\n8 9\n10 9\n')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI��Ŀ1\tests\test_preprocessing_features.py", line 15, in run_solution
+    self.assertTrue(solution.is_file(), f'ȱ�ٲο��� P{pid:03}')
+AssertionError: False is not true : ȱ�ٲο��� P026
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.026s
+
+FAILED (failures=85)

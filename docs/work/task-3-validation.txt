@@ -1,0 +1,198 @@
+COMMAND: .\.venv\Scripts\python.exe check.py --chapter 03 --solution
+
+
+P023 均值填补缺失值
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P024 按首次出现稳定去重
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P025 Min-Max 列缩放
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P026 总体 Z-score 标准化
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P027 先划分再拟合训练统计量
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P028 确定性类别过采样
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P029 SMOTE 线段插值
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P030 小型确定性 SMOTE
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+通过 40/40 个案例，共 8 题
+
+
+EXIT: 0
+
+COMMAND: .\.venv\Scripts\python.exe check.py --chapter 04 --solution
+
+
+P031 原始词频 TF
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P032 平滑 IDF
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P033 TF-IDF 与 L2 归一化
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P034 等宽分箱
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P035 按秩等频分组
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P036 二分类列联表卡方值
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P037 相邻卡方合并分箱
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+P038 中位数与 MAD 鲁棒特征
+  [通过] 独立案例1：输出符合要求
+  [通过] 独立案例2：输出符合要求
+  [通过] 独立案例3：输出符合要求
+  [通过] 独立案例4：输出符合要求
+  [通过] 独立案例5：输出符合要求
+
+通过 40/40 个案例，共 8 题
+
+
+EXIT: 0
+
+COMMAND: .\.venv\Scripts\python.exe -m unittest discover -s tests -p test_preprocessing_features.py -v
+
+test_all_hand_calculated_cases (test_preprocessing_features.PreprocessingFeatureTests.test_all_hand_calculated_cases) ... ok
+test_independent_contingency_is_zero (test_preprocessing_features.PreprocessingFeatureTests.test_independent_contingency_is_zero) ... ok
+test_mad_translation_invariant (test_preprocessing_features.PreprocessingFeatureTests.test_mad_translation_invariant) ... ok
+test_smote_excludes_closer_majority_and_endpoints (test_preprocessing_features.PreprocessingFeatureTests.test_smote_excludes_closer_majority_and_endpoints) ... ok
+test_tfidf_smoothed_manual_weights_and_unit_norm (test_preprocessing_features.PreprocessingFeatureTests.test_tfidf_smoothed_manual_weights_and_unit_norm) ... ok
+test_zscore_population_invariants_and_constant_column (test_preprocessing_features.PreprocessingFeatureTests.test_zscore_population_invariants_and_constant_column) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.179s
+
+OK
+
+
+EXIT: 0
+
+COMMAND: .\.venv\Scripts\python.exe check.py P023
+
+
+P023 均值填补缺失值
+  [未完成] 独立案例1：NotImplementedError: 请按题目提示完成这里
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 16, in <module>
+    answer = solve(sys.stdin.read())
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 11, in solve
+    raise NotImplementedError("请按题目提示完成这里")
+NotImplementedError: 请按题目提示完成这里
+  [未完成] 独立案例2：NotImplementedError: 请按题目提示完成这里
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 16, in <module>
+    answer = solve(sys.stdin.read())
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 11, in solve
+    raise NotImplementedError("请按题目提示完成这里")
+NotImplementedError: 请按题目提示完成这里
+  [未完成] 独立案例3：NotImplementedError: 请按题目提示完成这里
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 16, in <module>
+    answer = solve(sys.stdin.read())
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 11, in solve
+    raise NotImplementedError("请按题目提示完成这里")
+NotImplementedError: 请按题目提示完成这里
+  [未完成] 独立案例4：NotImplementedError: 请按题目提示完成这里
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 16, in <module>
+    answer = solve(sys.stdin.read())
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 11, in solve
+    raise NotImplementedError("请按题目提示完成这里")
+NotImplementedError: 请按题目提示完成这里
+  [未完成] 独立案例5：NotImplementedError: 请按题目提示完成这里
+Traceback (most recent call last):
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 16, in <module>
+    answer = solve(sys.stdin.read())
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\98356\Documents\ChatGPT\AI科目1\chapters\03_preprocessing\problems\P023\exercise.py", line 11, in solve
+    raise NotImplementedError("请按题目提示完成这里")
+NotImplementedError: 请按题目提示完成这里
+
+通过 0/5 个案例，共 1 题
+
+
+EXIT: 1
+
+AUDIT PASS: 16 problem folders, 80 independent cases, 16 unfinished exercises, 16 standalone solutions, 16 solution notes, 2 chapter tutorials; AST, local links, samples, 3 distinct hints and explanatory comments checked.
+
+Python 3.11.15
