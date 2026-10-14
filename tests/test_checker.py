@@ -22,8 +22,14 @@ class CheckerTest(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 
-    def compare(self, actual, expected, mode):
-        result = self.checker.compare_output(actual, expected, mode)
+    def compare(self, actual, expected, mode, line_modes=None):
+        try:
+            if line_modes is None:
+                result = self.checker.compare_output(actual, expected, mode)
+            else:
+                result = self.checker.compare_output(actual, expected, mode, line_modes=line_modes)
+        except TypeError as error:
+            self.fail(f"compare_output 应接受可选 line_modes：{error}")
         self.assertIsInstance(result, tuple)
         self.assertIsInstance(result[1], str)
         return result[0]
@@ -87,6 +93,85 @@ class CheckerTest(unittest.TestCase):
         for token in ("nan", "NaN", "inf", "-Infinity", "1e999"):
             self.assertFalse(self.compare(token, token, "float"), token)
         self.assertFalse(self.compare("1", "nan", "float"))
+
+    def test_mixed_rows_accept_float_tolerance_and_exact_text(self):
+        self.assertTrue(self.compare("中心\t\r\n1.0000005 0.0000005\r\n+1 -0\r\n\r\n",
+                                     "中心\n1 0\n1 0\n", "text", ["text", "float", "int"]))
+        self.assertFalse(self.compare("中 心\n1 0\n1 0", "中心\n1 0\n1 0",
+                                      "float", ["text", "float", "int"]))
+
+    def test_mixed_integer_labels_reject_decimal_and_exponent(self):
+        for token in ("0.0000001", "1e0", "1.0", "nan", "inf"):
+            with self.subTest(token=token):
+                self.assertFalse(self.compare("1.0\n" + token, "1\n0" if token == "0.0000001" else "1\n1",
+                                              "float", ["float", "int"]))
+
+    def test_mixed_float_rows_reject_nonfinite_actual_and_expected(self):
+        for token in ("nan", "inf", "1e999"):
+            with self.subTest(token=token):
+                self.assertFalse(self.compare(token + "\n1", "1\n1", "int", ["float", "int"]))
+                self.assertFalse(self.compare("1\n1", token + "\n1", "int", ["float", "int"]))
+
+    def test_mixed_numeric_shape_precedes_all_value_comparison(self):
+        try:
+            ok, message = self.checker.compare_output("wrong\n9 9\n3", "label\n1 2\n3 4", "text",
+                                                       ["text", "float", "int"])
+        except TypeError as error:
+            self.fail(f"compare_output 应接受可选 line_modes：{error}")
+        self.assertFalse(ok)
+        self.assertIn("第 3 行应有 2 个元素", message)
+        self.assertFalse(self.compare("1\n0\nextra", "1\n0", "float", ["float", "int"]))
+
+    def test_invalid_line_modes_return_clear_comparison_error(self):
+        for modes in ("float", ("float", "int"), [], ["float"], ["float", "int", "int"],
+                      ["float", "number"], ["float", None], ["float", []], ["float", {}]):
+            with self.subTest(line_modes=modes):
+                try:
+                    ok, message = self.checker.compare_output("1\n0", "1\n0", "float", modes)
+                except TypeError as error:
+                    self.fail(f"非法 line_modes 应返回诊断：{error}")
+                self.assertFalse(ok)
+                self.assertIn("line_modes", message)
+
+    def test_run_case_propagates_mixed_modes(self):
+        case = {"input": "", "expected": "1\n0\n", "line_modes": ["float", "int"]}
+        self.assertEqual(self.checker.run_case(self.script("print('1.0000005\\n0')"), case, "float")["status"], "pass")
+        result = self.checker.run_case(self.script("print('1\\n0.0000001')"), case, "float")
+        self.assertEqual(result["status"], "wrong_answer")
+        self.assertIn("十进制整数", result["message"])
+
+    def test_cli_valid_mixed_metadata_and_executor(self):
+        cases = [{"name": str(i), "input": "", "expected": "1\n0\n\n", "line_modes": ["float", "int"]}
+                 for i in range(5)]
+        directory = self.problem(mode="text", cases=cases)
+        (directory / "exercise.py").write_text("print('1.0000005\\n0')", encoding="utf-8")
+        result = self.cli("--all")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        (directory / "exercise.py").write_text("print('1\\n0.0000001')", encoding="utf-8")
+        result = self.cli("--all")
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn("十进制整数", result.stdout)
+
+    def test_invalid_line_modes_metadata_is_clean_exit_two(self):
+        for modes in (None, "float", {}, [], ["float"], ["float", "int", "int"],
+                      ["float", "number"], ["float", None], ["float", []], ["float", {}]):
+            with self.subTest(line_modes=modes):
+                cases = [{"name": str(i), "input": "", "expected": "1\n0", "line_modes": modes}
+                         for i in range(5)]
+                self.problem(mode="float", cases=cases)
+                result = self.cli("--all")
+                self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+                self.assertIn("line_modes", result.stderr)
+                self.assertNotIn("Traceback", result.stderr)
+
+    def test_mixed_invalid_integer_reference_is_metadata_error(self):
+        cases = [{"name": str(i), "input": "", "expected": "1\n1e0", "line_modes": ["float", "int"]}
+                 for i in range(5)]
+        self.problem(mode="float", cases=cases)
+        result = self.cli("--all")
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        self.assertIn("expected 不合法", result.stderr)
+        self.assertIn("十进制整数", result.stderr)
 
     def test_utf8_stdin_stdout_and_chinese_path(self):
         result = self.run_script("print(input() + '，世界')\n", "你好，世界\n", "你好\n", "text")

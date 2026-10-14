@@ -26,27 +26,43 @@ def _lines(value):
     return lines
 
 
-def compare_output(actual, expected, mode):
-    """返回 (是否通过, 中文诊断)。数值比较保留行、列形状。"""
+def _line_modes_error(line_modes, expected_lines):
+    if not isinstance(line_modes, list):
+        return "line_modes 必须是列表，仅支持 text、int、float"
+    if len(line_modes) != len(expected_lines):
+        return f"line_modes 长度应为 {len(expected_lines)}，实际为 {len(line_modes)}"
+    for row, line_mode in enumerate(line_modes, 1):
+        if not isinstance(line_mode, str) or line_mode not in ("text", "int", "float"):
+            return f"line_modes 第 {row} 项仅支持 text、int、float"
+    return None
+
+
+def compare_output(actual, expected, mode, line_modes=None):
+    """返回 (是否通过, 中文诊断)；可逐行指定模式，先检查数值行形状。"""
     if mode not in ("text", "int", "float"):
         return False, f"不支持的比较模式：{mode}"
     actual_lines, expected_lines = _lines(actual), _lines(expected)
+    if line_modes is not None:
+        error = _line_modes_error(line_modes, expected_lines)
+        if error:
+            return False, error
+    modes = line_modes if line_modes is not None else [mode] * len(expected_lines)
     if len(actual_lines) != len(expected_lines):
         return False, f"输出行数应为 {len(expected_lines)}，实际为 {len(actual_lines)}"
-    if mode != "text":
-        for row, (got_line, want_line) in enumerate(zip(actual_lines, expected_lines), 1):
+    for row, (got_line, want_line, line_mode) in enumerate(zip(actual_lines, expected_lines, modes), 1):
+        if line_mode != "text":
             got_count, want_count = len(got_line.split()), len(want_line.split())
             if got_count != want_count:
                 return False, f"第 {row} 行应有 {want_count} 个元素，实际为 {got_count}"
-    for row, (got_line, want_line) in enumerate(zip(actual_lines, expected_lines), 1):
-        if mode == "text":
+    for row, (got_line, want_line, line_mode) in enumerate(zip(actual_lines, expected_lines, modes), 1):
+        if line_mode == "text":
             if got_line != want_line:
                 return False, f"第 {row} 行应为 {want_line!r}，实际为 {got_line!r}"
             continue
         got_tokens, want_tokens = got_line.split(), want_line.split()
         for column, (got, want) in enumerate(zip(got_tokens, want_tokens), 1):
             label = f"第 {row} 行第 {column} 个元素"
-            if mode == "int":
+            if line_mode == "int":
                 if not INTEGER.fullmatch(got) or not INTEGER.fullmatch(want):
                     return False, f"{label}必须是十进制整数：实际 {got!r}，期望 {want!r}"
                 # 直接用整数比较，避免先转 float 丢失大整数精度。
@@ -115,7 +131,7 @@ def _run_case(script_path, case, mode, timeout, cwd):
         lines = process.stderr.strip().splitlines()
         result.update(status=status, message=lines[-1] if lines else f"程序退出码：{process.returncode}")
         return result
-    ok, message = compare_output(process.stdout, case["expected"], mode)
+    ok, message = compare_output(process.stdout, case["expected"], mode, case.get("line_modes"))
     result.update(status="pass" if ok else "wrong_answer", message=message)
     return result
 
@@ -175,7 +191,11 @@ def _validate_metadata(data, path):
         for key in ("input", "expected"):
             if not isinstance(case.get(key), str):
                 fail(f"案例 {case['name']} 的 {key} 必须是字符串")
-        ok, message = compare_output(case["expected"], case["expected"], data["mode"])
+        if "line_modes" in case:
+            error = _line_modes_error(case["line_modes"], _lines(case["expected"]))
+            if error:
+                fail(f"案例 {case['name']} 的 {error}")
+        ok, message = compare_output(case["expected"], case["expected"], data["mode"], case.get("line_modes"))
         if not ok:
             fail(f"案例 {case['name']} 的 expected 不合法：{message}")
     if "timeout" in data:
