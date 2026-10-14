@@ -1,0 +1,2 @@
+# Course runtime: Python 3.11; install in this project's .venv only.
+numpy==2.2.6
