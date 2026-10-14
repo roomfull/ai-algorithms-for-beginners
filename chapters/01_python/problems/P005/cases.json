@@ -1,0 +1,39 @@
+{
+  "id": "P005",
+  "chapter": "01",
+  "title": "if 分数分类",
+  "mode": "text",
+  "requires": [],
+  "cases": [
+    {
+      "name": "手算案例1",
+      "input": "60\n",
+      "expected": "PASS\n"
+    },
+    {
+      "name": "手算案例2",
+      "input": "59\n",
+      "expected": "FAIL\n"
+    },
+    {
+      "name": "手算案例3",
+      "input": "90\n",
+      "expected": "EXCELLENT\n"
+    },
+    {
+      "name": "手算案例4",
+      "input": "89\n",
+      "expected": "PASS\n"
+    },
+    {
+      "name": "手算案例5",
+      "input": "0\n",
+      "expected": "FAIL\n"
+    },
+    {
+      "name": "手算案例6",
+      "input": "100\n",
+      "expected": "EXCELLENT\n"
+    }
+  ]
+}

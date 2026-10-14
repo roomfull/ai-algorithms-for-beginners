@@ -1,0 +1,34 @@
+{
+  "id": "P009",
+  "chapter": "01",
+  "title": "字典词频",
+  "mode": "int",
+  "requires": [],
+  "cases": [
+    {
+      "name": "手算案例1",
+      "input": "cat dog cat\ncat\n",
+      "expected": "2\n"
+    },
+    {
+      "name": "手算案例2",
+      "input": "a b c\nx\n",
+      "expected": "0\n"
+    },
+    {
+      "name": "手算案例3",
+      "input": "hi hi hi\nhi\n",
+      "expected": "3\n"
+    },
+    {
+      "name": "手算案例4",
+      "input": "A a A\na\n",
+      "expected": "1\n"
+    },
+    {
+      "name": "手算案例5",
+      "input": "one\none\n",
+      "expected": "1\n"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "P012",
+  "chapter": "01",
+  "title": "函数与 return",
+  "mode": "int",
+  "requires": [],
+  "cases": [
+    {
+      "name": "手算案例1",
+      "input": "3\n4\n",
+      "expected": "9\n16\n"
+    },
+    {
+      "name": "手算案例2",
+      "input": "0\n-2\n",
+      "expected": "0\n4\n"
+    },
+    {
+      "name": "手算案例3",
+      "input": "1\n1\n",
+      "expected": "1\n1\n"
+    },
+    {
+      "name": "手算案例4",
+      "input": "-3\n5\n",
+      "expected": "9\n25\n"
+    },
+    {
+      "name": "手算案例5",
+      "input": "10\n-10\n",
+      "expected": "100\n100\n"
+    }
+  ]
+}

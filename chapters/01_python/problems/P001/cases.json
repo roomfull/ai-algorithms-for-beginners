@@ -1,0 +1,34 @@
+{
+  "id": "P001",
+  "chapter": "01",
+  "title": "第一行固定输出",
+  "mode": "text",
+  "requires": [],
+  "cases": [
+    {
+      "name": "手算案例1",
+      "input": "",
+      "expected": "Hello, Python!\n"
+    },
+    {
+      "name": "手算案例2",
+      "input": "abc\n",
+      "expected": "Hello, Python!\n"
+    },
+    {
+      "name": "手算案例3",
+      "input": "123\n",
+      "expected": "Hello, Python!\n"
+    },
+    {
+      "name": "手算案例4",
+      "input": "你好\n",
+      "expected": "Hello, Python!\n"
+    },
+    {
+      "name": "手算案例5",
+      "input": "1\n2\n",
+      "expected": "Hello, Python!\n"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "P016",
+  "chapter": "02",
+  "title": "总体方差",
+  "mode": "float",
+  "requires": [
+    "numpy"
+  ],
+  "cases": [
+    {
+      "name": "手算案例1",
+      "input": "1 2 3\n",
+      "expected": "0.6666666666666666\n"
+    },
+    {
+      "name": "手算案例2",
+      "input": "7\n",
+      "expected": "0\n"
+    },
+    {
+      "name": "手算案例3",
+      "input": "2 2 2\n",
+      "expected": "0\n"
+    },
+    {
+      "name": "手算案例4",
+      "input": "-2 2\n",
+      "expected": "4\n"
+    },
+    {
+      "name": "手算案例5",
+      "input": "0 2 4 6\n",
+      "expected": "5\n"
+    }
+  ]
+}
