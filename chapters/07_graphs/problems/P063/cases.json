@@ -1,0 +1,34 @@
+{
+  "id": "P063",
+  "title": "并查集连接查询",
+  "mode": "int",
+  "chapter": "07",
+  "requires": [],
+  "cases": [
+    {
+      "name": "连接传递",
+      "input": "5 7\n1 0 1\n0 0 1\n1 0 1\n0 1 2\n1 0 2\n1 3 4\n1 4 4\n",
+      "expected": "0\n1\n1\n0\n1\n"
+    },
+    {
+      "name": "单点自查",
+      "input": "1 1\n1 0 0\n",
+      "expected": "1\n"
+    },
+    {
+      "name": "没有合并",
+      "input": "3 2\n1 0 2\n1 1 1\n",
+      "expected": "0\n1\n"
+    },
+    {
+      "name": "重复合并",
+      "input": "2 4\n0 0 1\n0 1 0\n0 0 0\n1 0 1\n",
+      "expected": "1\n"
+    },
+    {
+      "name": "连接两个已有组",
+      "input": "4 5\n0 0 1\n0 2 3\n1 0 3\n0 1 2\n1 0 3\n",
+      "expected": "0\n1\n"
+    }
+  ]
+}

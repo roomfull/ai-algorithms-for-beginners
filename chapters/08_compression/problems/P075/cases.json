@@ -1,0 +1,54 @@
+{
+  "id": "P075",
+  "title": "仿射uint8量化与截断",
+  "mode": "float",
+  "chapter": "08",
+  "requires": [],
+  "cases": [
+    {
+      "name": "无误差整数格",
+      "input": "5 0.5 128\n-1 -0.5 0 0.5 1\n",
+      "expected": "126 127 128 129 130\n-1 -0.5 0 0.5 1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "奇零点半格",
+      "input": "6 0.1 1\n0.05 0.15 0.25 -0.05 -0.15 -0.25\n",
+      "expected": "1 3 3 1 0 0\n0 0.2 0.2 0 -0.1 -0.1\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "双端截断",
+      "input": "3 1 128\n-200 200 0\n",
+      "expected": "0 255 128\n-128 127 0\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "零点为零",
+      "input": "3 2 0\n-2 1 3\n",
+      "expected": "0 0 2\n0 0 4\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "零点为255",
+      "input": "3 2 255\n-3 -1 2\n",
+      "expected": "253 255 255\n-4 0 0\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    }
+  ]
+}

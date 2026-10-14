@@ -1,0 +1,54 @@
+{
+  "id": "P069",
+  "title": "PageRank迭代至收敛",
+  "mode": "float",
+  "chapter": "07",
+  "requires": [],
+  "cases": [
+    {
+      "name": "三轮收敛",
+      "input": "2 1 0.8 0.1 10\n0 1\n",
+      "expected": "3 1\n0.348 0.652\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "达到上限",
+      "input": "2 1 0.8 0.01 1\n0 1\n",
+      "expected": "1 0\n0.3 0.7\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "无边固定点",
+      "input": "3 0 0.9 0.001 5\n",
+      "expected": "1 1\n0.333333333333 0.333333333333 0.333333333333\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "均匀环固定点",
+      "input": "3 3 0.85 0.000001 5\n0 1\n1 2\n2 0\n",
+      "expected": "1 1\n0.333333333333 0.333333333333 0.333333333333\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    },
+    {
+      "name": "恰好阈值",
+      "input": "2 1 0.5 0.25 5\n0 1\n",
+      "expected": "1 1\n0.375 0.625\n",
+      "line_modes": [
+        "int",
+        "float"
+      ]
+    }
+  ]
+}

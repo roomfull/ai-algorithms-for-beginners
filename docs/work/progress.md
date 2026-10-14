@@ -8,8 +8,8 @@
 - Task 1: complete (884ec08..356381c). Python 3.11.15 / NumPy 2.2.6; 29 checker tests passed. Independent reviewer review_infra: Spec compliant, Quality Approved, no P1/P2 findings. Review requires final chapter IDs and final all-answer validation in Task 6.
 - Task 2: complete (356381c..8a73936). 22 problems, 111/111 cases, 4 independent mathematics checks. review_foundations: Spec PASS, Quality PASS, no P0–P2 findings; all 112 generated materials match sources. Two forward links to chapter 03 await Task 3.
 - Task 3: complete (8a73936..415cd0a..aa3a274). 16 problems, 82/82 cases, 9 independent/regression tests. Round1 addressed all 3 P2; reviewer passed focused re-review and source consistency.
-- Task 4: in_progress
-- Task 5: pending
+- Task 4: complete (fa791e9..cf1fa3b). 20 problems,108/108 cases,14 independent/regression tests; review_ml fix round1 passed (3 P2 +1 P3 closed). Mixed output checker integrated and reviewed.
+- Task 5: in_progress
 - Task 6: pending
 
 ## 崩溃恢复记录
@@ -18,6 +18,6 @@
 
 Task 3: fix round 1/5 complete (3 addressed, 0 open). Commit aa3a274; reviewer ran 3 new targeted regression methods and confirmed all passed. No new issues in fix diff.
 
-Task 4: content committed fa791e9; 20 problems/102 cases/11 independent tests passed. review_ml found 3 P2 numeric boundaries (P045 exact zero, P050 decimal midpoint, P053 tiny-eps BCE) and one P3 complexity correction (P039/P040), fix round1 pending.
+Task 4: content committed fa791e9; review_ml found 3 P2 numeric boundaries (P045 exact zero, P050 decimal midpoint, P053 tiny-eps BCE) and one P3 complexity correction (P039/P040). Fix round1 cf1fa3b addressed all4, no new issues; Fraction boundaries and70-digit Decimal oracle confirmed.
 
 Mixed checker: complete e01c815, 38 tests passed; P044/P045/P049 integration 15/15 passed. review_checker_mixed approved spec/quality, no findings, backward compatibility and full shape-first semantics verified.
